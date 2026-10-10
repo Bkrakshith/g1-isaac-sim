@@ -394,3 +394,12 @@ The table below compares the two backends feature by feature.
 The design details are in `docs/design_notes.md`: why the simulator speaks DDS directly, the physics layer, the
 spawn pose, the grasp physics and the theatre layer. The measured rates, RTF and VRAM are in
 `docs/measurements.md`.
+
+## License
+
+The license of this repository is the Apache License, Version 2.0 (see `LICENSE`).
+You can use, change and share this work, also for commercial use.
+If you share this work or a work that you built on it, keep the `NOTICE` file.
+Give this credit in your documentation and product credits: "Based on hospital-sim by Bkrakshith (https://github.com/Bkrakshith/hospital-sim)".
+To cite this work in a publication, use `CITATION.cff`.
+Some third-party parts keep their own licences. The `NOTICE` file lists them.

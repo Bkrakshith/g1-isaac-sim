@@ -1,0 +1,26 @@
+g1-isaac-sim
+Copyright 2026 Bkrakshith (https://github.com/Bkrakshith)
+
+g1-isaac-sim is part of hospital-sim (https://github.com/Bkrakshith/hospital-sim), created by Bkrakshith.
+
+This work is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Attribution. Section 4 of the licence requires that any redistribution or derivative work keeps this
+NOTICE file and shows its attribution. If you use this work or build on it, give this credit in your
+documentation, in the credits of your product, and in your source distribution:
+
+    Based on hospital-sim by Bkrakshith (https://github.com/Bkrakshith/hospital-sim)
+
+If you use this work in a publication, cite it with the details in CITATION.cff.
+
+Third-party components
+
+The parts below are not covered by the copyright above and keep their own licences.
+
+- usd/g1_29dof_brainco.usd is converted from g1-brainco-description and contains mesh geometry from Unitree
+  unitree_ros (BSD-3-Clause) and BrainCo revo2_description (Apache-2.0).
+
+- setup_deps.sh installs unitree_sdk2_python (BSD-3-Clause) and cyclonedds (EPL-2.0 / EDL-1.0) into pydeps/.
+  They are not part of this repository.
+
+- NVIDIA Isaac Sim is required to run this code and is not included. It stays under NVIDIA's licence terms.
