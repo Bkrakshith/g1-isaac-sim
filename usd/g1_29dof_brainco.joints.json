@@ -1,0 +1,560 @@
+{
+ "urdf": "g1-brainco-description/g1_29dof_brainco/urdf/g1_29dof_brainco.urdf",
+ "default_prim": "/g1_29dof_brainco",
+ "articulation_root": "/g1_29dof_brainco/Geometry/pelvis",
+ "body_joints": [
+  {
+   "mimic": [],
+   "name": "left_hip_pitch_joint",
+   "lower_deg": -144.99842834472656,
+   "upper_deg": 165.00038146972656,
+   "max_force": 88.0,
+   "max_vel_deg_s": 1833.4649658203125,
+   "armature": 0.010178
+  },
+  {
+   "mimic": [],
+   "name": "left_hip_roll_joint",
+   "lower_deg": -30.000070571899414,
+   "upper_deg": 170.00230407714844,
+   "max_force": 139.0,
+   "max_vel_deg_s": 1145.9156494140625,
+   "armature": 0.025102
+  },
+  {
+   "mimic": [],
+   "name": "left_hip_yaw_joint",
+   "lower_deg": -157.99884033203125,
+   "upper_deg": 157.99884033203125,
+   "max_force": 88.0,
+   "max_vel_deg_s": 1833.4649658203125,
+   "armature": 0.010178
+  },
+  {
+   "mimic": [],
+   "name": "left_knee_joint",
+   "lower_deg": -5.000030994415283,
+   "upper_deg": 165.00038146972656,
+   "max_force": 139.0,
+   "max_vel_deg_s": 1145.9156494140625,
+   "armature": 0.025102
+  },
+  {
+   "mimic": [],
+   "name": "left_ankle_pitch_joint",
+   "lower_deg": -50.000308990478516,
+   "upper_deg": 30.000070571899414,
+   "max_force": 35.0,
+   "max_vel_deg_s": 1718.8734130859375,
+   "armature": 0.007219
+  },
+  {
+   "mimic": [],
+   "name": "left_ankle_roll_joint",
+   "lower_deg": -15.000035285949707,
+   "upper_deg": 15.000035285949707,
+   "max_force": 35.0,
+   "max_vel_deg_s": 1718.8734130859375,
+   "armature": 0.007219
+  },
+  {
+   "mimic": [],
+   "name": "right_hip_pitch_joint",
+   "lower_deg": -144.99842834472656,
+   "upper_deg": 165.00038146972656,
+   "max_force": 88.0,
+   "max_vel_deg_s": 1833.4649658203125,
+   "armature": 0.010178
+  },
+  {
+   "mimic": [],
+   "name": "right_hip_roll_joint",
+   "lower_deg": -170.00230407714844,
+   "upper_deg": 30.000070571899414,
+   "max_force": 139.0,
+   "max_vel_deg_s": 1145.9156494140625,
+   "armature": 0.025102
+  },
+  {
+   "mimic": [],
+   "name": "right_hip_yaw_joint",
+   "lower_deg": -157.99884033203125,
+   "upper_deg": 157.99884033203125,
+   "max_force": 88.0,
+   "max_vel_deg_s": 1833.4649658203125,
+   "armature": 0.010178
+  },
+  {
+   "mimic": [],
+   "name": "right_knee_joint",
+   "lower_deg": -5.000030994415283,
+   "upper_deg": 165.00038146972656,
+   "max_force": 139.0,
+   "max_vel_deg_s": 1145.9156494140625,
+   "armature": 0.025102
+  },
+  {
+   "mimic": [],
+   "name": "right_ankle_pitch_joint",
+   "lower_deg": -50.000308990478516,
+   "upper_deg": 30.000070571899414,
+   "max_force": 35.0,
+   "max_vel_deg_s": 1718.8734130859375,
+   "armature": 0.007219
+  },
+  {
+   "mimic": [],
+   "name": "right_ankle_roll_joint",
+   "lower_deg": -15.000035285949707,
+   "upper_deg": 15.000035285949707,
+   "max_force": 35.0,
+   "max_vel_deg_s": 1718.8734130859375,
+   "armature": 0.007219
+  },
+  {
+   "mimic": [],
+   "name": "waist_yaw_joint",
+   "lower_deg": -150.00035095214844,
+   "upper_deg": 150.00035095214844,
+   "max_force": 88.0,
+   "max_vel_deg_s": 1833.4649658203125,
+   "armature": 0.010178
+  },
+  {
+   "mimic": [],
+   "name": "waist_roll_joint",
+   "lower_deg": -29.793806076049805,
+   "upper_deg": 29.793806076049805,
+   "max_force": 35.0,
+   "max_vel_deg_s": 1718.8734130859375,
+   "armature": 0.007219
+  },
+  {
+   "mimic": [],
+   "name": "waist_pitch_joint",
+   "lower_deg": -29.793806076049805,
+   "upper_deg": 29.793806076049805,
+   "max_force": 35.0,
+   "max_vel_deg_s": 1718.8734130859375,
+   "armature": 0.007219
+  },
+  {
+   "mimic": [],
+   "name": "left_shoulder_pitch_joint",
+   "lower_deg": -176.9981231689453,
+   "upper_deg": 153.00265502929688,
+   "max_force": 25.0,
+   "max_vel_deg_s": 2119.94384765625,
+   "armature": 0.00361
+  },
+  {
+   "mimic": [],
+   "name": "left_shoulder_roll_joint",
+   "lower_deg": -90.99715423583984,
+   "upper_deg": 129.00144958496094,
+   "max_force": 25.0,
+   "max_vel_deg_s": 2119.94384765625,
+   "armature": 0.00361
+  },
+  {
+   "mimic": [],
+   "name": "left_shoulder_yaw_joint",
+   "lower_deg": -150.00035095214844,
+   "upper_deg": 150.00035095214844,
+   "max_force": 25.0,
+   "max_vel_deg_s": 2119.94384765625,
+   "armature": 0.00361
+  },
+  {
+   "mimic": [],
+   "name": "left_elbow_joint",
+   "lower_deg": -60.00014114379883,
+   "upper_deg": 120.00028228759766,
+   "max_force": 25.0,
+   "max_vel_deg_s": 2119.94384765625,
+   "armature": 0.00361
+  },
+  {
+   "mimic": [],
+   "name": "left_wrist_roll_joint",
+   "lower_deg": -113.0,
+   "upper_deg": 113.0,
+   "max_force": 25.0,
+   "max_vel_deg_s": 2119.94384765625,
+   "armature": 0.00361
+  },
+  {
+   "mimic": [],
+   "name": "left_wrist_pitch_joint",
+   "lower_deg": -92.5,
+   "upper_deg": 92.5,
+   "max_force": 5.0,
+   "max_vel_deg_s": 1260.5072021484375,
+   "armature": 0.00425
+  },
+  {
+   "mimic": [],
+   "name": "left_wrist_yaw_joint",
+   "lower_deg": -92.5,
+   "upper_deg": 92.5,
+   "max_force": 5.0,
+   "max_vel_deg_s": 1260.5072021484375,
+   "armature": 0.00425
+  },
+  {
+   "mimic": [],
+   "name": "right_shoulder_pitch_joint",
+   "lower_deg": -176.9981231689453,
+   "upper_deg": 153.00265502929688,
+   "max_force": 25.0,
+   "max_vel_deg_s": 2119.94384765625,
+   "armature": 0.00361
+  },
+  {
+   "mimic": [],
+   "name": "right_shoulder_roll_joint",
+   "lower_deg": -129.00144958496094,
+   "upper_deg": 90.99715423583984,
+   "max_force": 25.0,
+   "max_vel_deg_s": 2119.94384765625,
+   "armature": 0.00361
+  },
+  {
+   "mimic": [],
+   "name": "right_shoulder_yaw_joint",
+   "lower_deg": -150.00035095214844,
+   "upper_deg": 150.00035095214844,
+   "max_force": 25.0,
+   "max_vel_deg_s": 2119.94384765625,
+   "armature": 0.00361
+  },
+  {
+   "mimic": [],
+   "name": "right_elbow_joint",
+   "lower_deg": -60.00014114379883,
+   "upper_deg": 120.00028228759766,
+   "max_force": 25.0,
+   "max_vel_deg_s": 2119.94384765625,
+   "armature": 0.00361
+  },
+  {
+   "mimic": [],
+   "name": "right_wrist_roll_joint",
+   "lower_deg": -113.0,
+   "upper_deg": 113.0,
+   "max_force": 25.0,
+   "max_vel_deg_s": 2119.94384765625,
+   "armature": 0.00361
+  },
+  {
+   "mimic": [],
+   "name": "right_wrist_pitch_joint",
+   "lower_deg": -92.5,
+   "upper_deg": 92.5,
+   "max_force": 5.0,
+   "max_vel_deg_s": 1260.5072021484375,
+   "armature": 0.00425
+  },
+  {
+   "mimic": [],
+   "name": "right_wrist_yaw_joint",
+   "lower_deg": -92.5,
+   "upper_deg": 92.5,
+   "max_force": 5.0,
+   "max_vel_deg_s": 1260.5072021484375,
+   "armature": 0.00425
+  }
+ ],
+ "hand_joints": [
+  {
+   "mimic": [],
+   "name": "left_thumb_metacarpal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 88.99982452392578,
+   "max_force": 0.5,
+   "max_vel_deg_s": 149.97171020507812,
+   "armature": 0.001
+  },
+  {
+   "mimic": [],
+   "name": "left_thumb_proximal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 60.00014114379883,
+   "max_force": 1.100000023841858,
+   "max_vel_deg_s": 144.9755096435547,
+   "armature": 0.001
+  },
+  {
+   "mimic": [
+    "NewtonMimicAPI"
+   ],
+   "name": "left_thumb_distal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 66.00015258789062,
+   "max_force": 1.100000023841858,
+   "max_vel_deg_s": 144.9755096435547,
+   "armature": 0.001
+  },
+  {
+   "mimic": [],
+   "name": "left_index_proximal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 80.78704833984375,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [
+    "NewtonMimicAPI"
+   ],
+   "name": "left_index_distal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 97.00003814697266,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [],
+   "name": "left_middle_proximal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 80.78704833984375,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [
+    "NewtonMimicAPI"
+   ],
+   "name": "left_middle_distal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 97.00003814697266,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [],
+   "name": "left_ring_proximal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 80.78704833984375,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [
+    "NewtonMimicAPI"
+   ],
+   "name": "left_ring_distal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 97.00003814697266,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [],
+   "name": "left_pinky_proximal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 80.78704833984375,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [
+    "NewtonMimicAPI"
+   ],
+   "name": "left_pinky_distal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 97.00003814697266,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [],
+   "name": "right_thumb_metacarpal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 88.99982452392578,
+   "max_force": 0.5,
+   "max_vel_deg_s": 149.97171020507812,
+   "armature": 0.001
+  },
+  {
+   "mimic": [],
+   "name": "right_thumb_proximal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 60.00014114379883,
+   "max_force": 1.100000023841858,
+   "max_vel_deg_s": 144.9755096435547,
+   "armature": 0.001
+  },
+  {
+   "mimic": [
+    "NewtonMimicAPI"
+   ],
+   "name": "right_thumb_distal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 66.00015258789062,
+   "max_force": 1.100000023841858,
+   "max_vel_deg_s": 144.9755096435547,
+   "armature": 0.001
+  },
+  {
+   "mimic": [],
+   "name": "right_index_proximal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 80.78704833984375,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [
+    "NewtonMimicAPI"
+   ],
+   "name": "right_index_distal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 97.00003814697266,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [],
+   "name": "right_middle_proximal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 80.78704833984375,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [
+    "NewtonMimicAPI"
+   ],
+   "name": "right_middle_distal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 97.00003814697266,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [],
+   "name": "right_ring_proximal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 80.78704833984375,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [
+    "NewtonMimicAPI"
+   ],
+   "name": "right_ring_distal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 97.00003814697266,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [],
+   "name": "right_pinky_proximal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 80.78704833984375,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  },
+  {
+   "mimic": [
+    "NewtonMimicAPI"
+   ],
+   "name": "right_pinky_distal_joint",
+   "lower_deg": 0.0,
+   "upper_deg": 97.00003814697266,
+   "max_force": 2.0,
+   "max_vel_deg_s": 129.97547912597656,
+   "armature": 0.001
+  }
+ ],
+ "other_revolute": [],
+ "links": [
+  "head_link",
+  "left_ankle_pitch_link",
+  "left_ankle_roll_link",
+  "left_base2_link",
+  "left_base_link",
+  "left_elbow_link",
+  "left_hip_pitch_link",
+  "left_hip_roll_link",
+  "left_hip_yaw_link",
+  "left_index_distal_link",
+  "left_index_proximal_link",
+  "left_index_touch_link",
+  "left_knee_link",
+  "left_middle_distal_link",
+  "left_middle_proximal_link",
+  "left_middle_touch_link",
+  "left_pinky_distal_link",
+  "left_pinky_proximal_link",
+  "left_pinky_touch_link",
+  "left_ring_distal_link",
+  "left_ring_proximal_link",
+  "left_ring_touch_link",
+  "left_shoulder_pitch_link",
+  "left_shoulder_roll_link",
+  "left_shoulder_yaw_link",
+  "left_thumb_distal_link",
+  "left_thumb_metacarpal_link",
+  "left_thumb_proximal_link",
+  "left_thumb_touch_link",
+  "left_wrist_pitch_link",
+  "left_wrist_roll_link",
+  "left_wrist_yaw_link",
+  "logo_link",
+  "pelvis",
+  "pelvis_contour_link",
+  "right_ankle_pitch_link",
+  "right_ankle_roll_link",
+  "right_base2_link",
+  "right_base_link",
+  "right_elbow_link",
+  "right_hip_pitch_link",
+  "right_hip_roll_link",
+  "right_hip_yaw_link",
+  "right_index_distal_link",
+  "right_index_proximal_link",
+  "right_index_touch_link",
+  "right_knee_link",
+  "right_middle_distal_link",
+  "right_middle_proximal_link",
+  "right_middle_touch_link",
+  "right_pinky_distal_link",
+  "right_pinky_proximal_link",
+  "right_pinky_touch_link",
+  "right_ring_distal_link",
+  "right_ring_proximal_link",
+  "right_ring_touch_link",
+  "right_shoulder_pitch_link",
+  "right_shoulder_roll_link",
+  "right_shoulder_yaw_link",
+  "right_thumb_distal_link",
+  "right_thumb_metacarpal_link",
+  "right_thumb_proximal_link",
+  "right_thumb_touch_link",
+  "right_wrist_pitch_link",
+  "right_wrist_roll_link",
+  "right_wrist_yaw_link",
+  "torso_link",
+  "waist_roll_link",
+  "waist_yaw_link"
+ ]
+}

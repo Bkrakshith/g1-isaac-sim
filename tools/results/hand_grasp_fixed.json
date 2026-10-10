@@ -1,0 +1,91 @@
+{
+ "mode": "grasp",
+ "hand_physics": "fixed",
+ "trials": [
+  {
+   "instrument": "scalpel_handle",
+   "held": false,
+   "firm": false,
+   "finite": true,
+   "settle_slip_mm": 939.4,
+   "settle_rot_deg": 179.5,
+   "shake_slip_mm": 418.6,
+   "shake_rot_deg": 24.0,
+   "max_finger_speed": 10.0,
+   "max_instrument_speed": 4.194
+  },
+  {
+   "instrument": "adson_forceps",
+   "held": false,
+   "firm": false,
+   "finite": true,
+   "settle_slip_mm": 926.6,
+   "settle_rot_deg": 179.9,
+   "shake_slip_mm": 421.1,
+   "shake_rot_deg": 24.0,
+   "max_finger_speed": 10.0,
+   "max_instrument_speed": 4.241
+  },
+  {
+   "instrument": "angled_tweezers",
+   "held": true,
+   "firm": true,
+   "finite": true,
+   "settle_slip_mm": 58.2,
+   "settle_rot_deg": 53.9,
+   "shake_slip_mm": 2.8,
+   "shake_rot_deg": 3.3,
+   "max_finger_speed": 10.03,
+   "max_instrument_speed": 0.956
+  },
+  {
+   "instrument": "scissors",
+   "held": true,
+   "firm": true,
+   "finite": true,
+   "settle_slip_mm": 23.3,
+   "settle_rot_deg": 10.1,
+   "shake_slip_mm": 7.7,
+   "shake_rot_deg": 8.3,
+   "max_finger_speed": 10.04,
+   "max_instrument_speed": 0.816
+  },
+  {
+   "instrument": "needle_driver",
+   "held": true,
+   "firm": true,
+   "finite": true,
+   "settle_slip_mm": 16.9,
+   "settle_rot_deg": 30.8,
+   "shake_slip_mm": 0.7,
+   "shake_rot_deg": 0.3,
+   "max_finger_speed": 8.45,
+   "max_instrument_speed": 0.744
+  },
+  {
+   "instrument": "veress_needle",
+   "held": true,
+   "firm": true,
+   "finite": true,
+   "settle_slip_mm": 58.1,
+   "settle_rot_deg": 42.0,
+   "shake_slip_mm": 0.6,
+   "shake_rot_deg": 0.3,
+   "max_finger_speed": 10.0,
+   "max_instrument_speed": 0.777
+  },
+  {
+   "instrument": "trocar",
+   "held": true,
+   "firm": true,
+   "finite": true,
+   "settle_slip_mm": 10.7,
+   "settle_rot_deg": 19.0,
+   "shake_slip_mm": 0.0,
+   "shake_rot_deg": 0.0,
+   "max_finger_speed": 10.02,
+   "max_instrument_speed": 0.814
+  }
+ ],
+ "wall_s": 73.7
+}

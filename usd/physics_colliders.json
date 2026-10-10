@@ -1,0 +1,1830 @@
+{
+ "physics_hz": 500,
+ "floors": [
+  "WingFloor",
+  "HospitalFloor"
+ ],
+ "walls": 22,
+ "furniture": [
+  {
+   "name": "Fridge",
+   "source": "/World/Wing/Dressing/Store/Fridge",
+   "center": [
+    13.482,
+    -15.35,
+    1.089
+   ],
+   "size": [
+    0.675,
+    0.768,
+    2.179
+   ]
+  },
+  {
+   "name": "SterilA",
+   "source": "/World/Wing/Dressing/Store/SterilA",
+   "center": [
+    9.73,
+    -18.55,
+    0.936
+   ],
+   "size": [
+    0.301,
+    0.328,
+    0.132
+   ]
+  },
+  {
+   "name": "SterilB",
+   "source": "/World/Wing/Dressing/Store/SterilB",
+   "center": [
+    9.73,
+    -18.55,
+    1.025
+   ],
+   "size": [
+    0.425,
+    0.28,
+    0.05
+   ]
+  },
+  {
+   "name": "Wheelchair1",
+   "source": "/World/Wing/Dressing/Corridor/Wheelchair1",
+   "center": [
+    28.93,
+    -10.95,
+    0.368
+   ],
+   "size": [
+    0.543,
+    0.78,
+    0.736
+   ]
+  },
+  {
+   "name": "UVCRobot",
+   "source": "/World/Wing/Dressing/Corridor/UVCRobot",
+   "center": [
+    12.93,
+    -14.053,
+    0.906
+   ],
+   "size": [
+    0.625,
+    0.575,
+    1.812
+   ]
+  },
+  {
+   "name": "UtilityCart",
+   "source": "/World/Wing/Dressing/Corridor/UtilityCart",
+   "center": [
+    29.43,
+    -13.961,
+    0.638
+   ],
+   "size": [
+    0.646,
+    0.757,
+    1.275
+   ]
+  },
+  {
+   "name": "Plant",
+   "source": "/World/Wing/Dressing/Corridor/Plant",
+   "center": [
+    31.07,
+    -12.45,
+    1.077
+   ],
+   "size": [
+    1.501,
+    1.193,
+    2.155
+   ]
+  },
+  {
+   "name": "Screen0",
+   "source": "/World/Wing/Dressing/PACU/Screen0",
+   "center": [
+    22.83,
+    -6.0,
+    0.94
+   ],
+   "size": [
+    0.643,
+    2.825,
+    1.881
+   ]
+  },
+  {
+   "name": "Screen1",
+   "source": "/World/Wing/Dressing/PACU/Screen1",
+   "center": [
+    25.93,
+    -6.0,
+    0.94
+   ],
+   "size": [
+    0.643,
+    2.825,
+    1.881
+   ]
+  },
+  {
+   "name": "Screen2",
+   "source": "/World/Wing/Dressing/PACU/Screen2",
+   "center": [
+    29.03,
+    -6.0,
+    0.94
+   ],
+   "size": [
+    0.643,
+    2.825,
+    1.881
+   ]
+  },
+  {
+   "name": "CrashCart",
+   "source": "/World/Wing/Dressing/PACU/CrashCart",
+   "center": [
+    22.696,
+    -10.225,
+    0.897
+   ],
+   "size": [
+    1.412,
+    1.159,
+    1.795
+   ]
+  },
+  {
+   "name": "Defibrillator",
+   "source": "/World/Wing/Dressing/PACU/Defibrillator",
+   "center": [
+    23.33,
+    -10.238,
+    1.434
+   ],
+   "size": [
+    0.444,
+    0.204,
+    0.268
+   ]
+  },
+  {
+   "name": "Screen0_",
+   "source": "/World/Wing/Dressing/PreOp/Screen0",
+   "center": [
+    10.78,
+    -6.0,
+    0.94
+   ],
+   "size": [
+    0.643,
+    2.825,
+    1.881
+   ]
+  },
+  {
+   "name": "Screen1_",
+   "source": "/World/Wing/Dressing/PreOp/Screen1",
+   "center": [
+    13.78,
+    -6.0,
+    0.94
+   ],
+   "size": [
+    0.643,
+    2.825,
+    1.881
+   ]
+  },
+  {
+   "name": "DiagCart",
+   "source": "/World/Wing/Dressing/PreOp/DiagCart",
+   "center": [
+    17.522,
+    -5.85,
+    0.612
+   ],
+   "size": [
+    0.595,
+    1.157,
+    1.224
+   ]
+  },
+  {
+   "name": "sm_anesthesiamachine_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_anesthesiamachine_a01_01",
+   "center": [
+    23.121,
+    -21.735,
+    0.851
+   ],
+   "size": [
+    2.262,
+    0.848,
+    1.703
+   ]
+  },
+  {
+   "name": "sm_articulatedsupportarm_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_articulatedsupportarm_a01_01",
+   "center": [
+    22.383,
+    -18.048,
+    2.185
+   ],
+   "size": [
+    1.389,
+    1.199,
+    2.626
+   ]
+  },
+  {
+   "name": "sm_breathingcircuits_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_breathingcircuits_a01_01",
+   "center": [
+    22.839,
+    -23.842,
+    1.3
+   ],
+   "size": [
+    0.404,
+    0.452,
+    0.091
+   ]
+  },
+  {
+   "name": "sm_cathetersystem_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_cathetersystem_a01_01",
+   "center": [
+    21.543,
+    -23.084,
+    0.268
+   ],
+   "size": [
+    0.206,
+    0.504,
+    0.061
+   ]
+  },
+  {
+   "name": "sm_drugcabinet_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_drugcabinet_a01_01",
+   "center": [
+    24.36,
+    -23.968,
+    0.502
+   ],
+   "size": [
+    0.75,
+    0.726,
+    1.005
+   ]
+  },
+  {
+   "name": "sm_drugcabinet_a03_01",
+   "source": "/World/Wing/ORSuite/Props/sm_drugcabinet_a03_01",
+   "center": [
+    23.592,
+    -24.071,
+    1.07
+   ],
+   "size": [
+    0.773,
+    0.94,
+    2.14
+   ]
+  },
+  {
+   "name": "sm_drugcabinet_a04_01",
+   "source": "/World/Wing/ORSuite/Props/sm_drugcabinet_a04_01",
+   "center": [
+    27.136,
+    -24.083,
+    1.101
+   ],
+   "size": [
+    1.834,
+    1.113,
+    2.203
+   ]
+  },
+  {
+   "name": "sm_drugcabinet_a06_01",
+   "source": "/World/Wing/ORSuite/Props/sm_drugcabinet_a06_01",
+   "center": [
+    22.456,
+    -24.018,
+    1.09
+   ],
+   "size": [
+    1.637,
+    1.033,
+    2.193
+   ]
+  },
+  {
+   "name": "sm_electrosurgicalunit_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_electrosurgicalunit_a01_01",
+   "center": [
+    22.558,
+    -20.511,
+    0.977
+   ],
+   "size": [
+    0.473,
+    0.473,
+    0.138
+   ]
+  },
+  {
+   "name": "sm_emergencytrolley_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_emergencytrolley_a01_01",
+   "center": [
+    19.13,
+    -21.65,
+    0.898
+   ],
+   "size": [
+    1.412,
+    1.159,
+    1.795
+   ]
+  },
+  {
+   "name": "sm_endoscope_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_endoscope_a01_01",
+   "center": [
+    23.135,
+    -15.105,
+    1.0
+   ],
+   "size": [
+    1.311,
+    0.713,
+    1.999
+   ]
+  },
+  {
+   "name": "sm_endoscopysystem_b01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_endoscopysystem_b01_01",
+   "center": [
+    19.402,
+    -15.658,
+    0.628
+   ],
+   "size": [
+    0.71,
+    0.694,
+    0.135
+   ]
+  },
+  {
+   "name": "sm_instrumenttrolley_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_instrumenttrolley_a01_01",
+   "center": [
+    13.13,
+    -20.35,
+    0.537
+   ],
+   "size": [
+    0.802,
+    0.568,
+    1.074
+   ]
+  },
+  {
+   "name": "sm_instrumenttrolley_b01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_instrumenttrolley_b01_01",
+   "center": [
+    21.504,
+    -22.928,
+    0.446
+   ],
+   "size": [
+    1.057,
+    0.58,
+    0.892
+   ]
+  },
+  {
+   "name": "sm_instrumenttrolley_b02_01",
+   "source": "/World/Wing/ORSuite/Props/sm_instrumenttrolley_b02_01",
+   "center": [
+    24.452,
+    -20.721,
+    0.453
+   ],
+   "size": [
+    0.591,
+    0.541,
+    0.907
+   ]
+  },
+  {
+   "name": "sm_instrumenttrolley_b03_01",
+   "source": "/World/Wing/ORSuite/Props/sm_instrumenttrolley_b03_01",
+   "center": [
+    22.891,
+    -17.434,
+    0.389
+   ],
+   "size": [
+    0.783,
+    0.471,
+    0.778
+   ]
+  },
+  {
+   "name": "sm_instrumenttrolley_b04_01",
+   "source": "/World/Wing/ORSuite/Props/sm_instrumenttrolley_b04_01",
+   "center": [
+    21.585,
+    -14.949,
+    0.432
+   ],
+   "size": [
+    0.967,
+    0.451,
+    0.864
+   ]
+  },
+  {
+   "name": "sm_instrumenttrolley_b05_01",
+   "source": "/World/Wing/ORSuite/Props/sm_instrumenttrolley_b05_01",
+   "center": [
+    22.584,
+    -20.515,
+    0.472
+   ],
+   "size": [
+    0.509,
+    0.706,
+    0.944
+   ]
+  },
+  {
+   "name": "sm_lasersystem_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_lasersystem_a01_01",
+   "center": [
+    27.38,
+    -17.039,
+    0.651
+   ],
+   "size": [
+    0.534,
+    0.985,
+    1.301
+   ]
+  },
+  {
+   "name": "sm_medicalutilitycart_a03_01",
+   "source": "/World/Wing/ORSuite/Props/sm_medicalutilitycart_a03_01",
+   "center": [
+    25.679,
+    -23.768,
+    0.638
+   ],
+   "size": [
+    0.646,
+    0.757,
+    1.275
+   ]
+  },
+  {
+   "name": "sm_mobilecartsandtables_b01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_mobilecartsandtables_b01_01",
+   "center": [
+    27.178,
+    -22.892,
+    0.525
+   ],
+   "size": [
+    0.988,
+    0.379,
+    1.049
+   ]
+  },
+  {
+   "name": "sm_mobilecartsandtables_c01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_mobilecartsandtables_c01_01",
+   "center": [
+    19.261,
+    -15.894,
+    0.512
+   ],
+   "size": [
+    1.494,
+    0.552,
+    1.022
+   ]
+  },
+  {
+   "name": "sm_mobilecartsandtables_f01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_mobilecartsandtables_f01_01",
+   "center": [
+    12.03,
+    -14.95,
+    0.746
+   ],
+   "size": [
+    1.397,
+    0.778,
+    1.491
+   ]
+  },
+  {
+   "name": "sm_refrigerator_c01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_refrigerator_c01_01",
+   "center": [
+    18.459,
+    -23.994,
+    1.087
+   ],
+   "size": [
+    0.768,
+    0.675,
+    2.179
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_a01_01",
+   "center": [
+    21.577,
+    -22.623,
+    0.302
+   ],
+   "size": [
+    0.301,
+    0.328,
+    0.132
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_a02_01",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_a02_01",
+   "center": [
+    21.41,
+    -14.982,
+    0.318
+   ],
+   "size": [
+    0.301,
+    0.328,
+    0.16
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_a03_01",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_a03_01",
+   "center": [
+    18.27,
+    -23.976,
+    0.336
+   ],
+   "size": [
+    0.301,
+    0.328,
+    0.21
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b01_01",
+   "center": [
+    21.538,
+    -22.762,
+    0.77
+   ],
+   "size": [
+    0.596,
+    0.392,
+    0.05
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b02_01",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b02_01",
+   "center": [
+    22.828,
+    -17.453,
+    0.785
+   ],
+   "size": [
+    0.533,
+    0.32,
+    0.04
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b03_01",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b03_01",
+   "center": [
+    24.45,
+    -20.758,
+    0.915
+   ],
+   "size": [
+    0.358,
+    0.251,
+    0.04
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_e01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_e01_01",
+   "center": [
+    23.601,
+    -23.797,
+    0.576
+   ],
+   "size": [
+    0.508,
+    0.313,
+    0.147
+   ]
+  },
+  {
+   "name": "sm_surgeryroomcontrolpanel_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_surgeryroomcontrolpanel_a01_01",
+   "center": [
+    27.732,
+    -19.482,
+    1.356
+   ],
+   "size": [
+    1.822,
+    0.197,
+    0.623
+   ]
+  },
+  {
+   "name": "sm_surgeryroomcontrolpanel_b01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_surgeryroomcontrolpanel_b01_01",
+   "center": [
+    27.728,
+    -21.465,
+    1.571
+   ],
+   "size": [
+    1.834,
+    0.213,
+    1.538
+   ]
+  },
+  {
+   "name": "sm_surgicalchair_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicalchair_a01_01",
+   "center": [
+    23.892,
+    -18.445,
+    0.444
+   ],
+   "size": [
+    0.652,
+    0.619,
+    0.888
+   ]
+  },
+  {
+   "name": "sm_rodcuttershandle_b01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_rodcuttershandle_b01_01",
+   "center": [
+    21.815,
+    -14.88,
+    0.864
+   ],
+   "size": [
+    0.585,
+    0.101,
+    0.024
+   ]
+  },
+  {
+   "name": "sm_surgicallightceilingmobile_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicallightceilingmobile_a01_01",
+   "center": [
+    20.03,
+    -18.35,
+    0.865
+   ],
+   "size": [
+    0.633,
+    1.347,
+    1.729
+   ]
+  },
+  {
+   "name": "sm_surgicalmicroscope_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicalmicroscope_a01_01",
+   "center": [
+    23.467,
+    -16.916,
+    0.766
+   ],
+   "size": [
+    0.648,
+    1.77,
+    1.532
+   ]
+  },
+  {
+   "name": "sm_surgicalpowertool_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicalpowertool_a01_01",
+   "center": [
+    24.423,
+    -23.946,
+    1.096
+   ],
+   "size": [
+    0.58,
+    0.597,
+    0.196
+   ]
+  },
+  {
+   "name": "sm_surgicalsink_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicalsink_a01_01",
+   "center": [
+    16.93,
+    -22.0,
+    1.268
+   ],
+   "size": [
+    1.601,
+    0.692,
+    1.59
+   ]
+  },
+  {
+   "name": "sm_surgicalstaplercstplatform_a1_01",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicalstaplercstplatform_a1_01",
+   "center": [
+    21.415,
+    -22.955,
+    0.252
+   ],
+   "size": [
+    0.348,
+    0.398,
+    0.032
+   ]
+  },
+  {
+   "name": "sm_surgicalsuctionpump_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicalsuctionpump_a01_01",
+   "center": [
+    21.006,
+    -23.961,
+    0.515
+   ],
+   "size": [
+    0.626,
+    0.602,
+    1.031
+   ]
+  },
+  {
+   "name": "sm_surgicaltable_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicaltable_a01_01",
+   "center": [
+    23.113,
+    -19.057,
+    0.469
+   ],
+   "size": [
+    2.206,
+    0.689,
+    0.938
+   ]
+  },
+  {
+   "name": "sm_surgicaltissuemanagementsystem_b01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicaltissuemanagementsystem_b01_01",
+   "center": [
+    23.149,
+    -21.633,
+    0.877
+   ],
+   "size": [
+    0.53,
+    0.274,
+    0.034
+   ]
+  },
+  {
+   "name": "sm_ultrasoundusgmachine_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_ultrasoundusgmachine_a01_01",
+   "center": [
+    21.486,
+    -17.453,
+    0.83
+   ],
+   "size": [
+    0.649,
+    1.148,
+    1.658
+   ]
+  },
+  {
+   "name": "sm_surgicalsink_a01_02",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicalsink_a01_02",
+   "center": [
+    14.93,
+    -22.0,
+    1.268
+   ],
+   "size": [
+    1.601,
+    0.692,
+    1.59
+   ]
+  },
+  {
+   "name": "sm_surgicalchair_a01_02",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicalchair_a01_02",
+   "center": [
+    23.601,
+    -20.203,
+    0.444
+   ],
+   "size": [
+    0.652,
+    0.619,
+    0.888
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_a03_02",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_a03_02",
+   "center": [
+    18.587,
+    -23.976,
+    0.336
+   ],
+   "size": [
+    0.301,
+    0.328,
+    0.21
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_a03_03",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_a03_03",
+   "center": [
+    18.591,
+    -23.989,
+    0.538
+   ],
+   "size": [
+    0.301,
+    0.328,
+    0.21
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_a03_04",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_a03_04",
+   "center": [
+    18.27,
+    -23.976,
+    0.538
+   ],
+   "size": [
+    0.301,
+    0.328,
+    0.21
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_a02_02",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_a02_02",
+   "center": [
+    18.308,
+    -23.945,
+    0.818
+   ],
+   "size": [
+    0.301,
+    0.328,
+    0.16
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_a01_03",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_a01_03",
+   "center": [
+    23.667,
+    -23.809,
+    0.201
+   ],
+   "size": [
+    0.301,
+    0.328,
+    0.132
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_a01_04",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_a01_04",
+   "center": [
+    23.605,
+    -23.809,
+    0.382
+   ],
+   "size": [
+    0.301,
+    0.328,
+    0.132
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_e01_02",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_e01_02",
+   "center": [
+    23.601,
+    -23.797,
+    0.762
+   ],
+   "size": [
+    0.508,
+    0.313,
+    0.147
+   ]
+  },
+  {
+   "name": "sm_surgicalpowertool_c01_03",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicalpowertool_c01_03",
+   "center": [
+    25.673,
+    -23.66,
+    0.945
+   ],
+   "size": [
+    0.087,
+    0.302,
+    0.309
+   ]
+  },
+  {
+   "name": "sm_surgicalpowertool_c01_04",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicalpowertool_c01_04",
+   "center": [
+    22.749,
+    -17.503,
+    0.411
+   ],
+   "size": [
+    0.087,
+    0.302,
+    0.309
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b05_02",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b05_02",
+   "center": [
+    13.155,
+    -20.526,
+    1.083
+   ],
+   "size": [
+    0.316,
+    0.2,
+    0.031
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b04_11",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_11",
+   "center": [
+    27.312,
+    -23.846,
+    0.148
+   ],
+   "size": [
+    0.334,
+    0.239,
+    0.03
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b04_12",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_12",
+   "center": [
+    27.584,
+    -23.842,
+    0.149
+   ],
+   "size": [
+    0.334,
+    0.239,
+    0.03
+   ]
+  },
+  {
+   "name": "sm_surgicalpowertool_c01_05",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicalpowertool_c01_05",
+   "center": [
+    27.548,
+    -23.85,
+    1.292
+   ],
+   "size": [
+    0.087,
+    0.302,
+    0.309
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b04_13",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_13",
+   "center": [
+    27.584,
+    -23.842,
+    0.151
+   ],
+   "size": [
+    0.334,
+    0.239,
+    0.03
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b04_14",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_14",
+   "center": [
+    27.312,
+    -23.846,
+    0.151
+   ],
+   "size": [
+    0.334,
+    0.239,
+    0.03
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b04_15",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_15",
+   "center": [
+    27.584,
+    -23.842,
+    0.154
+   ],
+   "size": [
+    0.334,
+    0.239,
+    0.03
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b04_16",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_16",
+   "center": [
+    27.312,
+    -23.846,
+    0.154
+   ],
+   "size": [
+    0.334,
+    0.239,
+    0.03
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b04_17",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_17",
+   "center": [
+    27.584,
+    -23.842,
+    0.158
+   ],
+   "size": [
+    0.334,
+    0.239,
+    0.03
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b04_18",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_18",
+   "center": [
+    27.312,
+    -23.846,
+    0.158
+   ],
+   "size": [
+    0.334,
+    0.239,
+    0.03
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b04_19",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_19",
+   "center": [
+    27.584,
+    -23.842,
+    0.162
+   ],
+   "size": [
+    0.334,
+    0.239,
+    0.03
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_b04_20",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_20",
+   "center": [
+    27.312,
+    -23.846,
+    0.16
+   ],
+   "size": [
+    0.334,
+    0.239,
+    0.03
+   ]
+  },
+  {
+   "name": "sm_sterilisingcontainersystem_a01_05",
+   "source": "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_a01_05",
+   "center": [
+    27.498,
+    -23.805,
+    0.573
+   ],
+   "size": [
+    0.301,
+    0.328,
+    0.132
+   ]
+  },
+  {
+   "name": "sm_surgicalpowertool_c01_06",
+   "source": "/World/Wing/ORSuite/Props/sm_surgicalpowertool_c01_06",
+   "center": [
+    27.349,
+    -23.883,
+    1.29
+   ],
+   "size": [
+    0.087,
+    0.302,
+    0.309
+   ]
+  },
+  {
+   "name": "sm_defibrillator_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_defibrillator_a01_01",
+   "center": [
+    22.403,
+    -17.624,
+    1.534
+   ],
+   "size": [
+    0.444,
+    0.204,
+    0.268
+   ]
+  },
+  {
+   "name": "sm_hospitalscreen_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_hospitalscreen_a01_01",
+   "center": [
+    19.526,
+    -14.916,
+    0.941
+   ],
+   "size": [
+    2.825,
+    0.643,
+    1.881
+   ]
+  },
+  {
+   "name": "sm_humidifier_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_humidifier_a01_01",
+   "center": [
+    18.369,
+    -16.858,
+    0.48
+   ],
+   "size": [
+    0.315,
+    0.319,
+    0.96
+   ]
+  },
+  {
+   "name": "sm_uvcrobot_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_uvcrobot_a01_01",
+   "center": [
+    18.865,
+    -22.906,
+    0.906
+   ],
+   "size": [
+    0.625,
+    0.575,
+    1.812
+   ]
+  },
+  {
+   "name": "sm_wheelchair_b03_01",
+   "source": "/World/Wing/ORSuite/Props/sm_wheelchair_b03_01",
+   "center": [
+    19.276,
+    -23.758,
+    0.634
+   ],
+   "size": [
+    0.703,
+    0.716,
+    1.269
+   ]
+  },
+  {
+   "name": "sm_wheelchair_b03_02",
+   "source": "/World/Wing/ORSuite/Props/sm_wheelchair_b03_02",
+   "center": [
+    20.043,
+    -23.763,
+    0.634
+   ],
+   "size": [
+    0.703,
+    0.716,
+    1.269
+   ]
+  },
+  {
+   "name": "sm_inhalerdevice_a01_01",
+   "source": "/World/Wing/ORSuite/Props/sm_inhalerdevice_a01_01",
+   "center": [
+    22.949,
+    -23.922,
+    0.987
+   ],
+   "size": [
+    0.255,
+    0.409,
+    0.21
+   ]
+  },
+  {
+   "name": "sm_inhalerdevice_a01_02",
+   "source": "/World/Wing/ORSuite/Props/sm_inhalerdevice_a01_02",
+   "center": [
+    22.682,
+    -23.913,
+    0.987
+   ],
+   "size": [
+    0.255,
+    0.409,
+    0.21
+   ]
+  },
+  {
+   "name": "sm_wastecollector_a03_03",
+   "source": "/World/Wing/ORSuite/Props/sm_wastecollector_a03_03",
+   "center": [
+    17.6,
+    -15.243,
+    0.302
+   ],
+   "size": [
+    0.323,
+    0.427,
+    0.604
+   ]
+  },
+  {
+   "name": "sm_wastecollector_a03_04",
+   "source": "/World/Wing/ORSuite/Props/sm_wastecollector_a03_04",
+   "center": [
+    14.36,
+    -15.384,
+    0.302
+   ],
+   "size": [
+    0.323,
+    0.427,
+    0.604
+   ]
+  },
+  {
+   "name": "sm_wastecollector_a03_05",
+   "source": "/World/Wing/ORSuite/Props/sm_wastecollector_a03_05",
+   "center": [
+    18.396,
+    -15.504,
+    0.302
+   ],
+   "size": [
+    0.323,
+    0.427,
+    0.604
+   ]
+  },
+  {
+   "name": "sm_wastecollector_a03_06",
+   "source": "/World/Wing/ORSuite/Props/sm_wastecollector_a03_06",
+   "center": [
+    24.966,
+    -23.706,
+    0.302
+   ],
+   "size": [
+    0.323,
+    0.427,
+    0.604
+   ]
+  }
+ ],
+ "skipped": {
+  "/World/Wing/Dressing/Theatre/LWTrolley": "own collider",
+  "/World/Wing/Dressing/Theatre/Tray": "own collider",
+  "/World/Wing/Dressing/Theatre/Trocar": "own collider",
+  "/World/Wing/Dressing/Theatre/Needle": "own collider",
+  "/World/Wing/Dressing/Theatre/Tweezers": "own collider",
+  "/World/Wing/Dressing/Scrub/Towels": "own collider",
+  "/World/Wing/Dressing/Scrub/Gloves0": "small",
+  "/World/Wing/Dressing/Scrub/Gloves1": "small",
+  "/World/Wing/Dressing/Scrub/Gloves2": "overhead (z>1.45)",
+  "/World/Wing/Dressing/Scrub/Masks": "overhead (z>1.60)",
+  "/World/Wing/Dressing/Store/ShelfSet0": "own collider",
+  "/World/Wing/Dressing/Store/ShelfSet1": "own collider",
+  "/World/Wing/Dressing/Store/ShelfSet2": "own collider",
+  "/World/Wing/Dressing/Store/Shelf": "own collider",
+  "/World/Wing/Dressing/Store/SupplyCabinet0": "own collider",
+  "/World/Wing/Dressing/Store/SupplyCabinet1": "own collider",
+  "/World/Wing/Dressing/Store/MedShelf": "own collider",
+  "/World/Wing/Dressing/Store/CartA": "own collider",
+  "/World/Wing/Dressing/Store/CartB": "own collider",
+  "/World/Wing/Dressing/Store/TrayA": "own collider",
+  "/World/Wing/Dressing/Store/TrayB": "own collider",
+  "/World/Wing/Dressing/Corridor/Gurney0": "own collider",
+  "/World/Wing/Dressing/Corridor/Gurney1": "own collider",
+  "/World/Wing/Dressing/Corridor/SupplyCart": "own collider",
+  "/World/Wing/Dressing/Corridor/Wheelchair0": "own collider",
+  "/World/Wing/Dressing/Corridor/OxygenCart": "own collider",
+  "/World/Wing/Dressing/Corridor/LWCart": "own collider",
+  "/World/Wing/Dressing/Corridor/LWTrolley": "own collider",
+  "/World/Wing/Dressing/Corridor/SupplyCart2": "own collider",
+  "/World/Wing/Dressing/Corridor/WetFloor": "own collider",
+  "/World/Wing/Dressing/Corridor/SignPreOp": "overhead (z>2.20)",
+  "/World/Wing/Dressing/Corridor/SanitizerPreOp": "own collider",
+  "/World/Wing/Dressing/Corridor/SignPACU": "overhead (z>2.20)",
+  "/World/Wing/Dressing/Corridor/SanitizerPACU": "own collider",
+  "/World/Wing/Dressing/Corridor/SignStore": "overhead (z>2.20)",
+  "/World/Wing/Dressing/Corridor/SanitizerStore": "own collider",
+  "/World/Wing/Dressing/Corridor/SignScrub": "overhead (z>2.20)",
+  "/World/Wing/Dressing/Corridor/SanitizerScrub": "own collider",
+  "/World/Wing/Dressing/Corridor/SignTheatre": "overhead (z>2.20)",
+  "/World/Wing/Dressing/Corridor/SanitizerTheatre": "own collider",
+  "/World/Wing/Dressing/Corridor/NoEntry": "overhead (z>2.45)",
+  "/World/Wing/Dressing/Corridor/FirstAid": "own collider",
+  "/World/Wing/Dressing/Corridor/Intercom": "own collider",
+  "/World/Wing/Dressing/Corridor/SignBoard": "overhead (z>2.55)",
+  "/World/Wing/Dressing/PACU/Bed0": "own collider",
+  "/World/Wing/Dressing/PACU/Oxygen0": "own collider",
+  "/World/Wing/Dressing/PACU/BedsideTable0": "own collider",
+  "/World/Wing/Dressing/PACU/VitalPad0": "overhead (z>1.55)",
+  "/World/Wing/Dressing/PACU/Bed1": "own collider",
+  "/World/Wing/Dressing/PACU/Oxygen1": "own collider",
+  "/World/Wing/Dressing/PACU/BedsideTable1": "own collider",
+  "/World/Wing/Dressing/PACU/VitalPad1": "overhead (z>1.55)",
+  "/World/Wing/Dressing/PACU/Bed2": "own collider",
+  "/World/Wing/Dressing/PACU/Oxygen2": "own collider",
+  "/World/Wing/Dressing/PACU/BedsideTable2": "own collider",
+  "/World/Wing/Dressing/PACU/VitalPad2": "overhead (z>1.55)",
+  "/World/Wing/Dressing/PACU/Bed3": "own collider",
+  "/World/Wing/Dressing/PACU/Oxygen3": "own collider",
+  "/World/Wing/Dressing/PACU/BedsideTable3": "own collider",
+  "/World/Wing/Dressing/PACU/VitalPad3": "overhead (z>1.55)",
+  "/World/Wing/Dressing/PACU/Desk0": "own collider",
+  "/World/Wing/Dressing/PACU/Computer0": "own collider",
+  "/World/Wing/Dressing/PACU/Chair0": "own collider",
+  "/World/Wing/Dressing/PACU/Desk1": "own collider",
+  "/World/Wing/Dressing/PACU/Computer1": "own collider",
+  "/World/Wing/Dressing/PACU/Chair1": "own collider",
+  "/World/Wing/Dressing/PACU/MedCabinet": "own collider",
+  "/World/Wing/Dressing/PACU/Water": "own collider",
+  "/World/Wing/Dressing/PACU/Washbasin": "own collider",
+  "/World/Wing/Dressing/PACU/Soap": "own collider",
+  "/World/Wing/Dressing/PACU/Towels": "own collider",
+  "/World/Wing/Dressing/PACU/Bin": "own collider",
+  "/World/Wing/Dressing/PreOp/Bed0": "own collider",
+  "/World/Wing/Dressing/PreOp/BedsideTable0": "own collider",
+  "/World/Wing/Dressing/PreOp/Oxygen0": "own collider",
+  "/World/Wing/Dressing/PreOp/Bed1": "own collider",
+  "/World/Wing/Dressing/PreOp/BedsideTable1": "own collider",
+  "/World/Wing/Dressing/PreOp/Oxygen1": "own collider",
+  "/World/Wing/Dressing/PreOp/Bed2": "own collider",
+  "/World/Wing/Dressing/PreOp/BedsideTable2": "own collider",
+  "/World/Wing/Dressing/PreOp/Oxygen2": "own collider",
+  "/World/Wing/Dressing/PreOp/Desk": "own collider",
+  "/World/Wing/Dressing/PreOp/Computer": "own collider",
+  "/World/Wing/Dressing/PreOp/DeskChair": "own collider",
+  "/World/Wing/Dressing/PreOp/Scale": "own collider",
+  "/World/Wing/Dressing/PreOp/Washbasin": "own collider",
+  "/World/Wing/Dressing/PreOp/Soap": "own collider",
+  "/World/Wing/Dressing/PreOp/Towels": "own collider",
+  "/World/Wing/Dressing/PreOp/Bin": "own collider",
+  "/World/Wing/Dressing/PreOp/MedCabinet": "own collider",
+  "/World/Wing/Dressing/Link/FirstAid": "own collider",
+  "/World/Wing/Dressing/Link/Sanitizer": "own collider",
+  "/World/Wing/Dressing/Link/Intercom": "own collider",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_corner_01": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_corner_02": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_corner_03": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_corner_04": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_1m_straight_01": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_1m_straight_02": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_50cm_straight_01": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_50cm_straight_02": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_50cm_straight_03": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_1m_straight_03": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_1m_straight_04": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_50cm_straight_04": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_1m_straight_05": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_50cm_straight_05": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_50cm_straight_06": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_1m_straight_06": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_50cm_straight_07": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_50cm_straight_08": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_50cm_straight_09": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_1m_straight_07": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_1m_straight_08": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_50cm_straight_10": "overhead (z>3.20)",
+  "/World/Wing/ORSuite/Props/sm_anesthesiamask_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_glovebox_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_instrrumentsterilizationtray_c01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_instrrumentsterilizationtray_c02_01": "small",
+  "/World/Wing/ORSuite/Props/sm_instrrumentsterilizationtray_c03_01": "small",
+  "/World/Wing/ORSuite/Props/sm_insulinlancingdevice_b01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_insulinsyringe_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_insulinsyringe_a02_01": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a02_01": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a03_01": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a04_01": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_01": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_01": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_01": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a04_01": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalfacemasks_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_otoscope_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_01": "small",
+  "/World/Wing/ORSuite/Props/sm_surgicaldrape_a01_01": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_surgicalhandinstrumenthicura_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_bipolardissectingscissors_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_bonelevers_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_caliper_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_clamps_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_forceps_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_handsaws_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_knife_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_ligatureneedle_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_mallet_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_mirror_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_punches_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_raspatories_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_redonspike_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_retractor_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_scalpelshandle_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_scissors_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_selfretainingretractor_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_skingraftingknife_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_tamper_01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_boneclamp_b01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_boneforeceps_b01_03": "small",
+  "/World/Wing/ORSuite/Props/sm_bonehook_b01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_bonemallet_b01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_bonereugersangled_b01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_wirecutters_b01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_surgicallightceilingarms_a01_01": "overhead (z>1.45)",
+  "/World/Wing/ORSuite/Props/sm_surgicalmarkingpen_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_surgicalmonitor_a01_01": "overhead (z>1.56)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_01": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_ultrasound_b01_01": "overhead (z>1.72)",
+  "/World/Wing/ORSuite/Props/sm_vitalpad_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a04_02": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a04_03": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a04_04": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a04_05": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a04_06": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a04_07": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a04_08": "small",
+  "/World/Wing/ORSuite/Props/sm_surgicalpowertool_b01_02": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalfacemasks_a01_02": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalfacemasks_a01_03": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalfacemasks_a01_04": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalfacemasks_a01_05": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalfacemasks_a01_06": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalfacemasks_a01_07": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalfacemasks_a01_08": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalfacemasks_a01_09": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalfacemasks_a01_10": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalfacemasks_a01_11": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalfacemasks_a01_12": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalfacemasks_a01_13": "small",
+  "/World/Wing/ORSuite/Props/sm_surgicaldrape_a02_02": "small",
+  "/World/Wing/ORSuite/Props/sm_surgicaldrape_a02_03": "small",
+  "/World/Wing/ORSuite/Props/sm_surgicaldrape_a02_04": "small",
+  "/World/Wing/ORSuite/Props/sm_surgicaldrape_a02_05": "small",
+  "/World/Wing/ORSuite/Props/sm_surgicaldrape_a01_02": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_surgicaldrape_a01_03": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_surgicaldrape_a01_04": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_surgicaldrape_a01_05": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_surgicaldrape_a01_06": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_02": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_03": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_04": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_05": "overhead (z>1.82)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_06": "overhead (z>1.82)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_07": "overhead (z>1.82)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_08": "overhead (z>1.82)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_09": "overhead (z>1.82)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_10": "overhead (z>1.82)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_11": "overhead (z>1.82)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_12": "overhead (z>1.82)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_13": "overhead (z>1.82)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_14": "overhead (z>1.82)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_15": "overhead (z>1.82)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_16": "overhead (z>1.82)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_17": "overhead (z>1.87)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_18": "overhead (z>1.87)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_19": "overhead (z>1.88)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_20": "overhead (z>1.88)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_21": "overhead (z>1.88)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_22": "overhead (z>1.88)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_23": "overhead (z>1.88)",
+  "/World/Wing/ORSuite/Props/sm_surgicalneedles_a01_24": "overhead (z>1.88)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_03": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_04": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_05": "overhead (z>1.64)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_06": "overhead (z>1.64)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_07": "overhead (z>1.64)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_08": "overhead (z>1.64)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_09": "overhead (z>1.65)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b04_10": "overhead (z>1.65)",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_02": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_03": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_04": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_05": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_06": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_07": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_08": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_09": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_10": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_11": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_12": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_13": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_14": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_15": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_brown_16": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_02": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_03": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_04": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_05": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_06": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_07": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_08": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_09": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_10": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_11": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_12": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_02": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_03": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_04": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_05": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_06": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_07": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_08": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_09": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_10": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_11": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_12": "small",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b02_02": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b02_03": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b02_04": "overhead (z>1.64)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b02_05": "overhead (z>1.64)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b02_06": "overhead (z>1.65)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b02_07": "overhead (z>1.64)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b02_08": "overhead (z>1.65)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b02_09": "overhead (z>1.65)",
+  "/World/Wing/ORSuite/Props/sm_anesthesiamask_a01_02": "small",
+  "/World/Wing/ORSuite/Props/sm_anesthesiamask_a01_03": "small",
+  "/World/Wing/ORSuite/Props/sm_anesthesiamask_a01_04": "small",
+  "/World/Wing/ORSuite/Props/sm_anesthesiamask_a01_05": "small",
+  "/World/Wing/ORSuite/Props/sm_anesthesiamask_a01_06": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_02": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_03": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_04": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_05": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_06": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_07": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_08": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_09": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_10": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_11": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_12": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_14": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_15": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_16": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_17": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_18": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_13": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_19": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_20": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_21": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_23": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_25": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_26": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_30": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_31": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_32": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a01_02": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a01_03": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a01_04": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a01_05": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a01_06": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a01_07": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a01_08": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_a01_09": "small",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_02": "overhead (z>1.44)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b03_02": "overhead (z>1.44)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d01_02": "small",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b03_03": "overhead (z>1.44)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_b03_04": "overhead (z>1.45)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_03": "overhead (z>1.44)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_04": "overhead (z>1.45)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d01_03": "small",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_05": "overhead (z>1.45)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_06": "overhead (z>1.44)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_07": "overhead (z>1.44)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_08": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_09": "overhead (z>1.64)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_10": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_11": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_12": "overhead (z>1.64)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_13": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_14": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_16": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_17": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_18": "overhead (z>1.64)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_19": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_20": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_22": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_21": "overhead (z>1.64)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_23": "overhead (z>1.64)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d03_24": "overhead (z>1.64)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_02": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a01_02": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a03_02": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a04_02": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a01_03": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a01_04": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a01_05": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a01_06": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a01_07": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_03": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_04": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_05": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_06": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_07": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_08": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_09": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_10": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_11": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_12": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_13": "overhead (z>1.81)",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d01_04": "small",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d01_05": "small",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d01_06": "small",
+  "/World/Wing/ORSuite/Props/sm_sterilisingcontainersystem_d01_07": "small",
+  "/World/Wing/ORSuite/Props/sm_instrrumentsterilizationtray_c03_02": "small",
+  "/World/Wing/ORSuite/Props/sm_instrrumentsterilizationtray_c02_02": "small",
+  "/World/Wing/ORSuite/Props/sm_instrrumentsterilizationtray_c02_03": "small",
+  "/World/Wing/ORSuite/Props/sm_instrrumentsterilizationtray_c02_04": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a04_03": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a04_04": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a04_05": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a04_06": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a04_07": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a04_08": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a04_09": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a04_10": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a04_11": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a04_12": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a04_13": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a03_03": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a03_04": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a03_05": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a03_06": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_surgicaldrape_a01_07": "small",
+  "/World/Wing/ORSuite/Props/sm_glovebox_a01_02": "small",
+  "/World/Wing/ORSuite/Props/sm_ceilingextractor_a01_01": "overhead (z>3.42)",
+  "/World/Wing/ORSuite/Props/sm_camera_a01_01": "overhead (z>3.37)",
+  "/World/Wing/ORSuite/Props/sm_smokefiredetector_a01_01": "overhead (z>3.43)",
+  "/World/Wing/ORSuite/Props/sm_socket_b01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_camera_a01_02": "overhead (z>3.37)",
+  "/World/Wing/ORSuite/Props/sm_camera_a01_03": "overhead (z>3.38)",
+  "/World/Wing/ORSuite/Props/sm_hospitalsingdonotenter_a01_01": "overhead (z>2.77)",
+  "/World/Wing/ORSuite/Props/sm_hospitalsingdonotenter_a01_02": "overhead (z>2.55)",
+  "/World/Wing/ORSuite/Props/sm_hospitalsingboard_a01_01": "overhead (z>2.69)",
+  "/World/Wing/ORSuite/Props/sm_hospitalsingsidewall_a03_01": "overhead (z>2.13)",
+  "/World/Wing/ORSuite/Props/sm_hospitalsingsidewall_a03_02": "overhead (z>2.00)",
+  "/World/Wing/ORSuite/Props/sm_ceilinggrid_a02_01": "overhead (z>3.49)",
+  "/World/Wing/ORSuite/Props/sm_ceilinggrid_a02_02": "overhead (z>3.49)",
+  "/World/Wing/ORSuite/Props/sm_ceilingextractor_a01_02": "overhead (z>3.42)",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_a01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_b01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_d01_01": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_d01_02": "small",
+  "/World/Wing/ORSuite/Props/sm_ceilingextractor_a01_03": "overhead (z>3.42)",
+  "/World/Wing/ORSuite/Props/sm_ceilingextractor_a01_04": "overhead (z>3.42)",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_d01_03": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_d01_04": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_d01_05": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_02": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_03": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_04": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_05": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_06": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_07": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_08": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_09": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_10": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_11": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_12": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_13": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_14": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_15": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_16": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_17": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_18": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_c01_21": "overhead (z>1.63)",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_d01_06": "small",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_d01_07": "small",
+  "/World/Wing/ORSuite/Props/sm_smokefiredetector_a01_02": "overhead (z>3.43)",
+  "/World/Wing/ORSuite/Props/sm_socket_b01_02": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_01": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_02": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_03": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_04": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_05": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_06": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_07": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_08": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_09": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_10": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_11": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_12": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_13": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_14": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_15": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_16": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_17": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_18": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_19": "small",
+  "/World/Wing/ORSuite/Props/sm_socket_a03_20": "small",
+  "/World/Wing/ORSuite/Props/sm_smokefiredetector_a01_03": "overhead (z>3.43)",
+  "/World/Wing/ORSuite/Props/sm_disinfectant_b01_02": "small",
+  "/World/Wing/ORSuite/Props/sm_uvclamp_b01_01": "overhead (z>2.80)",
+  "/World/Wing/ORSuite/Props/sm_uvclamp_b01_02": "overhead (z>2.80)",
+  "/World/Wing/ORSuite/Props/sm_uvclamp_b01_03": "overhead (z>2.80)",
+  "/World/Wing/ORSuite/Props/sm_uvclamp_b01_04": "overhead (z>2.80)",
+  "/World/Wing/ORSuite/Props/sm_uvclamp_b01_05": "overhead (z>2.73)",
+  "/World/Wing/ORSuite/Props/sm_uvclamp_b01_06": "overhead (z>2.73)",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_13": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_14": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_15": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_16": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottles_b01_17": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_13": "small",
+  "/World/Wing/ORSuite/Props/sm_laboratorybottle_c01_clean_14": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_27": "small",
+  "/World/Wing/ORSuite/Props/sm_elasticbandage_a01_28": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_14": "small",
+  "/World/Wing/ORSuite/Props/sm_medicalbandage_a02_15": "small",
+  "/World/Wing/ORSuite/Props/sm_instrrumentsterilizationtray_c02_05": "small",
+  "/World/Wing/ORSuite/Props/sm_insulinlancingdevice_b01_02": "small",
+  "/World/Wing/ORSuite/Props/sm_surgicalmarkingpen_a01_02": "small"
+ }
+}

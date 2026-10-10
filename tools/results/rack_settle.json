@@ -1,0 +1,227 @@
+{
+ "log": {
+  "0.0": {
+   "scalpel_handle": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "adson_forceps": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "angled_tweezers": {
+    "tilt_deg": 0.03,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "scissors": {
+    "tilt_deg": 0.05,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "needle_driver": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "veress_needle": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "trocar": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   }
+  },
+  "0.01": {
+   "scalpel_handle": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "adson_forceps": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": -0.0
+   },
+   "angled_tweezers": {
+    "tilt_deg": 0.06,
+    "xy_drift_mm": 0.01,
+    "dz_mm": -0.0
+   },
+   "scissors": {
+    "tilt_deg": 0.11,
+    "xy_drift_mm": 0.01,
+    "dz_mm": 0.0
+   },
+   "needle_driver": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "veress_needle": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "trocar": {
+    "tilt_deg": 0.02,
+    "xy_drift_mm": 0.0,
+    "dz_mm": -0.0
+   }
+  },
+  "0.05": {
+   "scalpel_handle": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "adson_forceps": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": -0.0
+   },
+   "angled_tweezers": {
+    "tilt_deg": 0.48,
+    "xy_drift_mm": 0.01,
+    "dz_mm": 0.0
+   },
+   "scissors": {
+    "tilt_deg": 0.4,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.01
+   },
+   "needle_driver": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "veress_needle": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "trocar": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.01,
+    "dz_mm": -0.0
+   }
+  },
+  "0.1": {
+   "scalpel_handle": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "adson_forceps": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": -0.0
+   },
+   "angled_tweezers": {
+    "tilt_deg": 1.47,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "scissors": {
+    "tilt_deg": 1.11,
+    "xy_drift_mm": 0.01,
+    "dz_mm": 0.02
+   },
+   "needle_driver": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "veress_needle": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.01,
+    "dz_mm": 0.0
+   },
+   "trocar": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.01,
+    "dz_mm": 0.0
+   }
+  },
+  "0.5": {
+   "scalpel_handle": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "adson_forceps": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "angled_tweezers": {
+    "tilt_deg": 3.18,
+    "xy_drift_mm": 0.27,
+    "dz_mm": 0.0
+   },
+   "scissors": {
+    "tilt_deg": 4.7,
+    "xy_drift_mm": 1.65,
+    "dz_mm": 0.08
+   },
+   "needle_driver": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "veress_needle": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.01,
+    "dz_mm": 0.0
+   },
+   "trocar": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.01,
+    "dz_mm": 0.0
+   }
+  },
+  "3.0": {
+   "scalpel_handle": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "adson_forceps": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "angled_tweezers": {
+    "tilt_deg": 3.18,
+    "xy_drift_mm": 0.27,
+    "dz_mm": 0.0
+   },
+   "scissors": {
+    "tilt_deg": 4.98,
+    "xy_drift_mm": 1.89,
+    "dz_mm": 0.08
+   },
+   "needle_driver": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.0,
+    "dz_mm": 0.0
+   },
+   "veress_needle": {
+    "tilt_deg": 3.92,
+    "xy_drift_mm": 0.93,
+    "dz_mm": -0.04
+   },
+   "trocar": {
+    "tilt_deg": 0.0,
+    "xy_drift_mm": 0.01,
+    "dz_mm": 0.0
+   }
+  }
+ },
+ "pass": true
+}

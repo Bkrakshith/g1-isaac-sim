@@ -1,0 +1,15 @@
+{
+ "mode": "fall",
+ "hand_physics": "fixed",
+ "trials": [
+  {
+   "finite": true,
+   "t_nonfinite": null,
+   "max_link_speed": 5.0,
+   "max_joint_speed": 34.0,
+   "exploded": false,
+   "final_pelvis_z": 0.092
+  }
+ ],
+ "wall_s": 4.7
+}
