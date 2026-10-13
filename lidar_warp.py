@@ -3,7 +3,10 @@
 Why not RTX lidar: an RTX lidar render product adds GPU memory and render time on an 8 GB card that the
 hospital already fills to ~7 GB when rendering. This caster runs on the CPU (Warp BVH), costs no VRAM, and sees
 exactly what the robot can collide with: the physics layer's walls / floors / furniture boxes, the Isaac
-hospital's static colliders and every other static collider. Dynamic rigid bodies and the robot are ignored.
+hospital's static colliders and every other static collider. Dynamic rigid bodies and the robot are ignored,
+except the moving fixtures of every group (door leaves of Doors and Doors1, lift door panels, button caps): the caller
+passes their boxes with set_dynamic_boxes() before a scan, they go into a second small Warp mesh (12 triangles per
+box, refit in place only when a box moved) and every ray keeps the nearer hit of the two meshes.
 
 Pattern (Livox MID-360: 360 deg x -7..52 deg in its own frame, 10 Hz, non-repetitive): 25 elevation rings x 400
 azimuths with per-scan jitter (8 pre-generated patterns cycled) = up to 10k points / scan, like the MuJoCo backend.
@@ -34,6 +37,25 @@ def _cast(mesh: wp.uint64, origin: wp.vec3, rot: wp.mat33, dirs: wp.array(dtype=
         out[tid] = -1.0
 
 
+@wp.kernel
+def _cast2(mesh: wp.uint64, mesh2: wp.uint64, origin: wp.vec3, rot: wp.mat33, dirs: wp.array(dtype=wp.vec3),
+           max_d: float, out: wp.array(dtype=float)):
+    tid = wp.tid()
+    d = rot * dirs[tid]
+    t = max_d + 1.0
+    q = wp.mesh_query_ray(mesh, origin, d, max_d)
+    if q.result:
+        t = q.t
+    q2 = wp.mesh_query_ray(mesh2, origin, d, max_d)
+    if q2.result:
+        if q2.t < t:
+            t = q2.t
+    if t <= max_d:
+        out[tid] = t
+    else:
+        out[tid] = -1.0
+
+
 _BOX_TRIS = np.array([[0, 1, 3], [0, 3, 2], [4, 6, 7], [4, 7, 5], [0, 4, 5], [0, 5, 1],
                       [2, 3, 7], [2, 7, 6], [0, 2, 6], [0, 6, 4], [1, 5, 7], [1, 7, 3]], dtype=np.int32)
 
@@ -42,6 +64,20 @@ def _box(mn, mx, m):
     c = np.array([[x, y, z] for x in (mn[0], mx[0]) for y in (mn[1], mx[1]) for z in (mn[2], mx[2])], float)
     pts = np.array([m.Transform(Gf.Vec3d(*p)) for p in c], float)
     return pts, _BOX_TRIS.copy()
+
+
+# corner k of a box = (ix, iy, iz) with k = 4 ix + 2 iy + iz, the order _BOX_TRIS uses
+_CORNERS = np.array([[x, y, z] for x in (-0.5, 0.5) for y in (-0.5, 0.5) for z in (-0.5, 0.5)], float)
+
+
+def box_corners(centers, yaws, sizes):
+    """Oriented boxes (yaw about z) -> (n * 8, 3) corner points in _BOX_TRIS order."""
+    c, yw, sz = (np.asarray(v, float) for v in (centers, yaws, sizes))
+    loc = _CORNERS[None, :, :] * sz[:, None, :]
+    cs, sn = np.cos(yw)[:, None], np.sin(yw)[:, None]
+    x = cs * loc[..., 0] - sn * loc[..., 1]
+    y = sn * loc[..., 0] + cs * loc[..., 1]
+    return (np.stack([x, y, loc[..., 2]], -1) + c[:, None, :]).reshape(-1, 3)
 
 
 def _triangulate(counts, idx):
@@ -123,9 +159,37 @@ class WarpLidar:
         self._pat_np = [self._dirs() for _ in range(8)]
         self._pat = [wp.array(d, dtype=wp.vec3, device=device) for d in self._pat_np]
         self._k = 0
+        self.dyn = None  # moving fixtures (set_dynamic_boxes)
+        self.n_dyn = 0
+        self._dyn_last = None
+
+    def set_dynamic_boxes(self, centers, yaws, sizes):
+        """World boxes of the moving parts for the next scans (same count every call).
+
+        All moving fixtures of all groups go into one small mesh: door leaves (Doors, Doors1), lift door panels and
+        button caps (Lifts, Calls), 12 triangles each. When no box moved since the last call (doors at rest), the
+        upload and the BVH refit are skipped."""
+        pts = box_corners(centers, yaws, sizes).astype(np.float32)
+        if self.dyn is None or len(pts) != 8 * self.n_dyn:
+            self.n_dyn = len(pts) // 8
+            tris = (np.arange(self.n_dyn, dtype=np.int32)[:, None, None] * 8 + _BOX_TRIS[None]).reshape(-1)
+            self.dyn_points = wp.array(pts, dtype=wp.vec3, device=self.device)
+            self.dyn_indices = wp.array(tris.astype(np.int32), dtype=wp.int32, device=self.device)
+            self.dyn = wp.Mesh(points=self.dyn_points, indices=self.dyn_indices)
+        elif not np.array_equal(pts, self._dyn_last):
+            self.dyn_points.assign(pts)
+            self.dyn.refit()
+        self._dyn_last = pts
+
+    def _launch(self, n, o, rot, dirs, max_d, out):
+        if self.dyn is None:
+            wp.launch(_cast, dim=n, inputs=[self.mesh.id, o, rot, dirs, max_d, out], device=self.device)
+        else:
+            wp.launch(_cast2, dim=n, inputs=[self.mesh.id, self.dyn.id, o, rot, dirs, max_d, out], device=self.device)
 
     def describe(self):
-        return f"warp/{self.device}: {self.n_prims} static collider prims, {self.n_tris} triangles"
+        dyn = f", {self.n_dyn} moving fixture boxes" if self.dyn is not None else ""
+        return f"warp/{self.device}: {self.n_prims} static collider prims, {self.n_tris} triangles{dyn}"
 
     def _dirs(self):
         az = np.linspace(-math.pi, math.pi, self.azimuths, endpoint=False)
@@ -145,8 +209,7 @@ class WarpLidar:
         o, rot = self._pose(T_world_sensor)
         self._k = (self._k + 1) % len(self._pat)
         dirs_np, dirs = self._pat_np[self._k], self._pat[self._k]
-        wp.launch(_cast, dim=len(dirs_np), inputs=[self.mesh.id, o, rot, dirs, self.range_max, self.cloud_out],
-                  device=self.device)
+        self._launch(len(dirs_np), o, rot, dirs, self.range_max, self.cloud_out)
         r = self.cloud_out.numpy()
         ok = r > self.range_min
         cloud = np.empty((int(ok.sum()), 4), dtype=np.float32)
@@ -158,7 +221,6 @@ class WarpLidar:
     def scan2d(self, T_world_laser, range_max=30.0):
         """Planar scan in the laser frame's x-y plane: ranges[scan_rays] from -pi, inf = no return."""
         o, rot = self._pose(T_world_laser)
-        wp.launch(_cast, dim=self.scan_dirs.shape[0], inputs=[self.mesh.id, o, rot, self.scan_dirs, range_max,
-                                                              self.scan_out], device=self.device)
+        self._launch(self.scan_dirs.shape[0], o, rot, self.scan_dirs, float(range_max), self.scan_out)
         s = self.scan_out.numpy()
         return np.where(s > self.range_min, s, np.inf).astype(np.float32)

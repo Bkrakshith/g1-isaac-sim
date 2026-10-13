@@ -16,8 +16,16 @@ Interfaces (docs/interfaces.md):
              /g1/hand/{left,right}/cmd in (0..1) -> Revo2 finger targets, /g1/hand/{left,right}/state out,
              optional head RGB-D /g1/head_camera/{image_raw,depth,camera_info} (--camera), /sim/objects (--theatre).
              Published with Isaac's bundled rclpy (Humble).
+  fixtures   fire doors, bed lifts and lift buttons of the whole hospital (hospital-sim-env fixtures.usd, same
+             controller as MuJoCo; tier from the stage, see HG1_FIXTURES in README.md):
+             /sim/fire_alarm (std_msgs/Bool) in, /sim/fixtures/press (std_msgs/String, any button short name, e.g.
+             "LobbyCall", "MainCall", "Lift1_Open", "MainLift2_Close") in, /sim/lift/call (std_srvs/Trigger) =
+             press LobbyCall (wing bank), /sim/lift/call_main (std_srvs/Trigger) = press MainCall (main bank),
+             /sim/fixtures (std_msgs/String, JSON state of every door and lift) out at 10 Hz. /sim/reset also resets
+             them. See fixtures_isaac.py.
 Lidar: CPU/GPU-cheap Warp ray casting against a snapshot of the static collision geometry (walls, floors,
-furniture boxes, building colliders); dynamic props and the robot itself are not seen.
+furniture boxes, building colliders) plus the moving fixture boxes (door leaves, lift door panels, refit per
+scan); other dynamic props and the robot itself are not seen.
 """
 
 from __future__ import annotations
@@ -115,6 +123,13 @@ ap.add_argument("--broadphase", default=None, help="override physxScene:broadpha
 ap.add_argument("--deactivate", nargs="*", default=[], help="(debug) prim paths to deactivate before physics start")
 ap.add_argument("--no-fabric", action="store_true", help="(debug) do not enable PhysX Fabric updates")
 ap.add_argument("--keep-simmgr", action="store_true", help="(debug) keep isaacsim.core.simulation_manager enabled")
+ap.add_argument("--fixture-control", choices=["on", "off"], default="on",
+                help="fire doors / bed lifts (/World/Fixtures, when the stage has them): on = FixtureController drives "
+                     "them; off = they stay as authored, no control (debug)")
+ap.add_argument("--fixtures", default=None, choices=["wing", "tier1", "tier2", "full"],
+                help="fixture tier (sets HG1_FIXTURES; run.sh takes the same option). The run time uses the tier the "
+                     "stage was built with (customData hg1:tier on /World/Fixtures) and warns when they differ")
+ap.add_argument("--fixtures-hz", type=float, default=10.0, help="/sim/fixtures state rate")
 ap.add_argument("--profile", action="store_true", help="print per-section loop timings with the stats")
 ap.add_argument("--log", default=None, help="write a CSV of pelvis height / roll / pitch at 50 Hz to this path")
 args, _unknown = ap.parse_known_args()
@@ -234,8 +249,8 @@ if not args.dynamic_props:
     roots = set()
     it = iter(Usd.PrimRange(stage.GetPrimAtPath("/World"), Usd.TraverseInstanceProxies()))
     for p in it:
-        if str(p.GetPath()).startswith(G1) or str(p.GetPath()).startswith("/World/Theatre"):
-            it.PruneChildren()  # the robot and the scrub-nurse objects stay dynamic
+        if str(p.GetPath()).startswith((G1, "/World/Theatre", "/World/Fixtures")):
+            it.PruneChildren()  # the robot, the scrub-nurse objects and the fixtures (doors, lifts) stay dynamic
             continue
         if p.HasAPI(UsdPhysics.RigidBodyAPI):
             q = p
@@ -326,6 +341,17 @@ hand_act = [hands[s][d][0][0] for s in ("left", "right") for d in C.HAND_DOFS if
 hand_all = [(n, r, s, d) for s in ("left", "right") for d in C.HAND_DOFS for n, r in hands[s].get(d, [])]
 print(f"[run_sim] hand joints: {len(hand_act)} actuated, {len(hand_all)} driven (incl. coupled/mimic)", flush=True)
 lims = np.asarray(art.get_dof_limits()).reshape(NDOF, 2)
+
+# ---- fixtures: fire doors, bed lifts, buttons ---------------------------------------------------------------
+fixtures = None
+if args.fixtures:
+    os.environ["HG1_FIXTURES"] = args.fixtures
+if args.fixture_control == "on" and stage.GetPrimAtPath("/World/Fixtures"):
+    from fixtures_isaac import Fixtures  # noqa: E402
+
+    fixtures = Fixtures(stage, view, log=lambda m: print("[run_sim] " + m, flush=True))
+    print(f"[run_sim] fixtures: {fixtures.describe()}", flush=True)
+    print(f"[run_sim] fixture buttons: {', '.join(fixtures.buttons())}", flush=True)
 all_idx = np.arange(1, dtype=np.int32)
 
 default_q, default_src = C.load_default_qpos()
@@ -564,6 +590,35 @@ def _srv_reset(req, res):
 
 node.create_service(SetBool, "/sim/harness", _srv_harness)
 node.create_service(Trigger, "/sim/reset", _srv_reset)
+pub_fixtures = None
+if fixtures is not None:
+    from std_msgs.msg import Bool  # noqa: E402
+
+    def _on_alarm(msg):
+        fixtures.set_alarm(msg.data)
+        print(f"[run_sim] /sim/fire_alarm {bool(msg.data)}", flush=True)
+
+    def _on_press(msg):
+        try:
+            fixtures.press(msg.data.strip())
+        except KeyError:
+            print(f"[run_sim] /sim/fixtures/press: unknown button {msg.data!r}", flush=True)
+
+    def _lift_call(button, res):
+        if button not in fixtures.buttons():
+            res.success = False
+            res.message = f"no {button} in fixture tier {fixtures.tier}"
+            return res
+        fixtures.press(button)
+        res.success = not fixtures.ctl.alarm  # calls are ignored on fire recall
+        res.message = f"lift called ({button})" if res.success else "fire alarm: lifts on recall, call ignored"
+        return res
+
+    node.create_subscription(Bool, "/sim/fire_alarm", _on_alarm, 10)
+    node.create_subscription(String, "/sim/fixtures/press", _on_press, 10)
+    node.create_service(Trigger, "/sim/lift/call", lambda req, res: _lift_call("LobbyCall", res))  # wing bank
+    node.create_service(Trigger, "/sim/lift/call_main", lambda req, res: _lift_call("MainCall", res))  # main bank
+    pub_fixtures = node.create_publisher(String, "/sim/fixtures", 10)
 from sensor_msgs.msg import CameraInfo  # noqa: E402
 
 pub_img = node.create_publisher(Image, "/g1/head_camera/image_raw", sensor_qos) if args.camera else None
@@ -719,6 +774,7 @@ obj_view = None
 if obj_dynamic:
     obj_view = view.create_rigid_body_view([p_ for _n, _c, p_ in obj_dynamic])
 objects_every = max(1, int(round(1.0 / (DT * args.objects_hz))))
+fixtures_every = max(1, int(round(1.0 / (DT * args.fixtures_hz))))
 render_hz = args.render_hz if args.render_hz is not None else (30.0 if args.gui else (args.camera_hz if args.camera else 0.0))
 render_every = int(round(1.0 / (DT * render_hz))) if render_hz > 0 else 0
 lidar_every = max(1, int(round(1.0 / (DT * args.lidar_hz))))
@@ -790,10 +846,13 @@ def respawn():
     harness["quat"] = np.array([0, 0, math.sin(yaw / 2), math.cos(yaw / 2)])
     with cmd_lock:
         cmd["n"] = 0  # motors follow --idle again until the next /lowcmd
+    if fixtures is not None:
+        fixtures.reset()
     print("[run_sim] respawned (/sim/reset)", flush=True)
 
 
 prof = {}
+busy_list = []  # per-step busy time (s) in the current stats window (--profile)
 _pt = [0.0]
 
 
@@ -857,8 +916,10 @@ try:
         if harness["reset"]:
             respawn()
         apply_harness()
-
         _P('ctrl')
+        if fixtures is not None:
+            fixtures.step(DT)
+            _P('fixtures')
         # simulate directly: SimulationManager.step() calls get_simulation_time(), whose native implementation
         # traverses the whole USD stage every call (~9 ms/step in the hospital).
         phys_sim.simulate(DT, sim_t)
@@ -1005,6 +1066,8 @@ try:
             if logf and step % 10 == 0:
                 logf.write(f"{sim_t:.3f},{root[2]:.4f},{rpy[0]:.4f},{rpy[1]:.4f},{rpy[2]:.4f},{root[0]:.3f},{root[1]:.3f},{n_cmd}\n")
 
+        if pub_fixtures is not None and step % fixtures_every == 0:
+            pub_fixtures.publish(String(data=fixtures.state_json()))
         if (obj_dynamic or obj_static) and step % objects_every == 0:
             objs = dict(obj_static)
             if obj_view is not None:
@@ -1021,6 +1084,8 @@ try:
             Tw[:3, :3] = quat_xyzw_to_mat(tt[3:7])
             Tw[:3, 3] = tt[:3]
             Tm = Tw @ T_torso_mid
+            if fixtures is not None:
+                lidar.set_dynamic_boxes(*fixtures.boxes())  # leaves, lift panels, buttons at their current pose
             pts, ring = lidar.cloud(Tm)
             cl = np.zeros(pts.shape[0], dtype=LIVOX_DTYPE)
             cl["x"], cl["y"], cl["z"], cl["intensity"] = pts[:, 0], pts[:, 1], pts[:, 2], pts[:, 3]
@@ -1076,6 +1141,7 @@ try:
             ls.range_min, ls.range_max = lidar.range_min, SCAN_RANGE_MAX
             ls.ranges = array.array("f", scan.tobytes())
             pub_scan.publish(ls)
+            _P('lidar')
 
         if render_every and step % render_every == 0:
             app.update()
@@ -1105,10 +1171,12 @@ try:
                     cam_info_msg.header = im.header
                     pub_cinfo.publish(cam_info_msg)
 
-        _P('lidar_render')
+        _P('render')
         busy = time.monotonic() - t_loop
         stat_busy += busy
         stat_steps += 1
+        if args.profile:
+            busy_list.append(busy)
         if not args.no_realtime:
             target = wall0 + sim_t
             slack = target - time.monotonic()
@@ -1133,8 +1201,11 @@ try:
                   f"pelvis z {root[2]:.3f} rpy ({math.degrees(rpy[0]):.1f},{math.degrees(rpy[1]):.1f})  lowcmd rx {n_cmd} "
                   f"(bad crc {cmd['bad_crc']})", flush=True)
             if args.profile:
-                print("[run_sim] profile ms/step: " + ", ".join(f"{k} {1e3 * v / max(1, stat_steps):.3f}" for k, v in prof.items()), flush=True)
+                print("[run_sim] profile ms/step: " + ", ".join(f"{k} {1e3 * v / max(1, stat_steps):.3f}" for k, v in prof.items())
+                      + (f"; busy p50 {1e3 * np.percentile(busy_list, 50):.3f} p99 {1e3 * np.percentile(busy_list, 99):.3f}"
+                         f" max {1e3 * max(busy_list):.3f}" if busy_list else ""), flush=True)
                 prof.clear()
+                busy_list.clear()
             stat_t, stat_steps, stat_busy = time.monotonic(), 0, 0.0
         if args.duration and sim_t >= args.duration:
             running = False

@@ -64,14 +64,18 @@ ARMATURE = {n: a for n, a in zip(BODY_JOINTS, ARMATURE_LIST)}
 ARMATURE["default"] = 0.001
 
 # Spawn poses (world frame of hospital-sim-env/isaac/usd/hospital_g1.usd = MuJoCo hospital world frame). Shared with the MuJoCo
-# backend: read from g1-mujoco-sim/worlds/spawns.json when it exists, with the same values as fallback.
+# backend: read from g1-mujoco-sim/worlds/spawns.json when it exists. A name that the file does not have comes from
+# _FALLBACK_SPAWNS (the file wins for the same name). WING_ORIGIN = layout.WING_ORIGIN: the west edge of the 4 m link
+# (link wing x 0..4 = world x 17.93..21.93; hospital opening world x 18.03..20.76; FD60S doorset at world y -4.75).
 WING_ORIGIN = (17.93, -4.45, 0.0)
 SPAWNS_JSON = os.path.join(REPO, "g1-mujoco-sim/worlds/spawns.json")
 _FALLBACK_SPAWNS = {
     "default": "corridor_west",
     "corridor_west": {"x": 8.93, "y": -12.45, "yaw": 0.0},  # west end of the surgical corridor, facing east
-    "link": {"x": 18.93, "y": -5.65, "yaw": -1.570796},     # link corridor, facing south into the wing
-    "lobby": {"x": 18.93, "y": -1.95, "yaw": -1.570796},    # hospital SE lobby, facing the wing door
+    "link": {"x": 18.93, "y": -5.65, "yaw": -1.570796},     # in the 4 m link (wing x 1.0), facing south into the wing
+    "lobby": {"x": 18.93, "y": -1.95, "yaw": -1.570796},    # hospital SE lobby, facing the link opening
+    "ward_entrance": {"x": 17.6, "y": 8.5, "yaw": 1.570796},  # ward entrance, north of the nurse base, facing the ward
+    "ae_handover": {"x": -29.0, "y": 9.0, "yaw": 0.0},      # A&E hall north of the ambulance handover bay, facing east
 }
 PELVIS_HEIGHT = HOME_PELVIS_HEIGHT + 0.01  # spawn 1 cm above the home pelvis height (feet flat, then settle)
 
@@ -81,7 +85,7 @@ def load_spawns():
         with open(SPAWNS_JSON) as f:
             d = json.load(f)["hospital"]
         if d.get("default") in d:
-            return d
+            return {**_FALLBACK_SPAWNS, **d}
     except Exception:
         pass
     return dict(_FALLBACK_SPAWNS)

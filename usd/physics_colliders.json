@@ -1,10 +1,13 @@
 {
  "physics_hz": 500,
+ "tier": "tier2",
  "floors": [
   "WingFloor",
-  "HospitalFloor"
+  "HospitalFloor",
+  "LobbyFloor",
+  "ExitPathFloor"
  ],
- "walls": 22,
+ "walls": 27,
  "furniture": [
   {
    "name": "Fridge",
@@ -49,6 +52,20 @@
    ]
   },
   {
+   "name": "Plant",
+   "source": "/World/Wing/Dressing/LiftLobby/Plant",
+   "center": [
+    32.73,
+    -9.31,
+    1.077
+   ],
+   "size": [
+    1.193,
+    1.501,
+    2.155
+   ]
+  },
+  {
    "name": "Wheelchair1",
    "source": "/World/Wing/Dressing/Corridor/Wheelchair1",
    "center": [
@@ -80,7 +97,7 @@
    "name": "UtilityCart",
    "source": "/World/Wing/Dressing/Corridor/UtilityCart",
    "center": [
-    29.43,
+    23.53,
     -13.961,
     0.638
    ],
@@ -91,24 +108,10 @@
    ]
   },
   {
-   "name": "Plant",
-   "source": "/World/Wing/Dressing/Corridor/Plant",
-   "center": [
-    31.07,
-    -12.45,
-    1.077
-   ],
-   "size": [
-    1.501,
-    1.193,
-    2.155
-   ]
-  },
-  {
    "name": "Screen0",
    "source": "/World/Wing/Dressing/PACU/Screen0",
    "center": [
-    22.83,
+    25.23,
     -6.0,
     0.94
    ],
@@ -122,21 +125,7 @@
    "name": "Screen1",
    "source": "/World/Wing/Dressing/PACU/Screen1",
    "center": [
-    25.93,
-    -6.0,
-    0.94
-   ],
-   "size": [
-    0.643,
-    2.825,
-    1.881
-   ]
-  },
-  {
-   "name": "Screen2",
-   "source": "/World/Wing/Dressing/PACU/Screen2",
-   "center": [
-    29.03,
+    28.63,
     -6.0,
     0.94
    ],
@@ -150,7 +139,7 @@
    "name": "CrashCart",
    "source": "/World/Wing/Dressing/PACU/CrashCart",
    "center": [
-    22.696,
+    24.016,
     -10.225,
     0.897
    ],
@@ -164,13 +153,13 @@
    "name": "Defibrillator",
    "source": "/World/Wing/Dressing/PACU/Defibrillator",
    "center": [
-    23.33,
-    -10.238,
+    31.718,
+    -7.05,
     1.434
    ],
    "size": [
-    0.444,
     0.204,
+    0.444,
     0.268
    ]
   },
@@ -214,6 +203,160 @@
     0.595,
     1.157,
     1.224
+   ]
+  },
+  {
+   "name": "BayScreen",
+   "source": "/World/Building/Dressing/AE_Resus/BayScreen",
+   "center": [
+    -27.9,
+    19.15,
+    0.94
+   ],
+   "size": [
+    2.825,
+    0.643,
+    1.881
+   ]
+  },
+  {
+   "name": "CrashCart_",
+   "source": "/World/Building/Dressing/AE_Resus/CrashCart",
+   "center": [
+    -23.664,
+    19.516,
+    0.897
+   ],
+   "size": [
+    1.159,
+    1.412,
+    1.795
+   ]
+  },
+  {
+   "name": "CrashCart1",
+   "source": "/World/Building/Dressing/AE_Resus/CrashCart1",
+   "center": [
+    -28.666,
+    23.626,
+    0.897
+   ],
+   "size": [
+    1.412,
+    1.159,
+    1.795
+   ]
+  },
+  {
+   "name": "Defibrillator_",
+   "source": "/World/Building/Dressing/AE_Resus/Defibrillator",
+   "center": [
+    -23.651,
+    20.7,
+    1.434
+   ],
+   "size": [
+    0.204,
+    0.444,
+    0.268
+   ]
+  },
+  {
+   "name": "ChargingBay",
+   "source": "/World/Building/Dressing/AE_Handover/ChargingBay",
+   "center": [
+    -28.9,
+    5.9,
+    0.368
+   ],
+   "size": [
+    0.543,
+    0.78,
+    0.736
+   ]
+  },
+  {
+   "name": "Monitor",
+   "source": "/World/Building/Dressing/AE_Triage/Monitor",
+   "center": [
+    -2.816,
+    13.708,
+    1.502
+   ],
+   "size": [
+    0.279,
+    0.569,
+    0.404
+   ]
+  },
+  {
+   "name": "Defibrillator__",
+   "source": "/World/Building/Dressing/Ward_WS1/Defibrillator",
+   "center": [
+    21.512,
+    21.766,
+    0.934
+   ],
+   "size": [
+    0.444,
+    0.204,
+    0.268
+   ]
+  },
+  {
+   "name": "HoistStandIn",
+   "source": "/World/Building/Dressing/Ward_WS2/HoistStandIn",
+   "center": [
+    21.261,
+    13.313,
+    0.368
+   ],
+   "size": [
+    0.78,
+    0.543,
+    0.736
+   ]
+  },
+  {
+   "name": "ShowerChair",
+   "source": "/World/Building/Dressing/Ward_AssistedShower/ShowerChair",
+   "center": [
+    24.958,
+    -0.6,
+    0.368
+   ],
+   "size": [
+    0.78,
+    0.543,
+    0.736
+   ]
+  },
+  {
+   "name": "MedFridge",
+   "source": "/World/Building/Dressing/Ward_CleanUtility/MedFridge",
+   "center": [
+    13.469,
+    18.161,
+    1.089
+   ],
+   "size": [
+    0.768,
+    0.675,
+    2.179
+   ]
+  },
+  {
+   "name": "Fridge_",
+   "source": "/World/Building/Dressing/Ward_Pantry/Fridge",
+   "center": [
+    12.069,
+    14.457,
+    1.089
+   ],
+   "size": [
+    0.768,
+    0.675,
+    2.179
    ]
   },
   {
@@ -1373,6 +1516,8 @@
   "/World/Wing/Dressing/Store/CartB": "own collider",
   "/World/Wing/Dressing/Store/TrayA": "own collider",
   "/World/Wing/Dressing/Store/TrayB": "own collider",
+  "/World/Wing/Dressing/LiftLobby/SignLifts": "overhead (z>2.20)",
+  "/World/Wing/Dressing/LiftLobby/Sanitizer": "own collider",
   "/World/Wing/Dressing/Corridor/Gurney0": "own collider",
   "/World/Wing/Dressing/Corridor/Gurney1": "own collider",
   "/World/Wing/Dressing/Corridor/SupplyCart": "own collider",
@@ -1408,10 +1553,6 @@
   "/World/Wing/Dressing/PACU/Oxygen2": "own collider",
   "/World/Wing/Dressing/PACU/BedsideTable2": "own collider",
   "/World/Wing/Dressing/PACU/VitalPad2": "overhead (z>1.55)",
-  "/World/Wing/Dressing/PACU/Bed3": "own collider",
-  "/World/Wing/Dressing/PACU/Oxygen3": "own collider",
-  "/World/Wing/Dressing/PACU/BedsideTable3": "own collider",
-  "/World/Wing/Dressing/PACU/VitalPad3": "overhead (z>1.55)",
   "/World/Wing/Dressing/PACU/Desk0": "own collider",
   "/World/Wing/Dressing/PACU/Computer0": "own collider",
   "/World/Wing/Dressing/PACU/Chair0": "own collider",
@@ -1445,6 +1586,224 @@
   "/World/Wing/Dressing/Link/FirstAid": "own collider",
   "/World/Wing/Dressing/Link/Sanitizer": "own collider",
   "/World/Wing/Dressing/Link/Intercom": "own collider",
+  "/World/Building/Dressing/WC_Accessible/Toilet": "own collider",
+  "/World/Building/Dressing/WC_Accessible/ToiletPaper": "own collider",
+  "/World/Building/Dressing/WC_Accessible/Washbasin": "own collider",
+  "/World/Building/Dressing/WC_Accessible/Mirror": "own collider",
+  "/World/Building/Dressing/WC_Public/Toilet": "own collider",
+  "/World/Building/Dressing/WC_Public/ToiletPaper": "own collider",
+  "/World/Building/Dressing/WC_Public/Washbasin": "own collider",
+  "/World/Building/Dressing/Staff_WC/Toilet": "own collider",
+  "/World/Building/Dressing/Staff_WC/ToiletPaper": "own collider",
+  "/World/Building/Dressing/Staff_WC/Washbasin": "own collider",
+  "/World/Building/Dressing/Staff_WC/Mirror": "own collider",
+  "/World/Building/Dressing/Central_Store/Shelves": "own collider",
+  "/World/Building/Dressing/Central_Store/Shelf": "own collider",
+  "/World/Building/Dressing/Main_LiftLobby/SignLifts": "overhead (z>2.20)",
+  "/World/Building/Dressing/Main_LiftLobby/Sanitizer": "own collider",
+  "/World/Building/Dressing/AE_Majors1/Trolley": "own collider",
+  "/World/Building/Dressing/AE_Majors1/Monitor": "overhead (z>1.55)",
+  "/World/Building/Dressing/AE_Majors1/CarerChair0": "own collider",
+  "/World/Building/Dressing/AE_Majors1/CarerChair1": "own collider",
+  "/World/Building/Dressing/AE_Majors1/Washbasin": "own collider",
+  "/World/Building/Dressing/AE_Majors1/Soap": "own collider",
+  "/World/Building/Dressing/AE_Majors2/Trolley": "own collider",
+  "/World/Building/Dressing/AE_Majors2/Monitor": "overhead (z>1.55)",
+  "/World/Building/Dressing/AE_Majors2/CarerChair0": "own collider",
+  "/World/Building/Dressing/AE_Majors2/CarerChair1": "own collider",
+  "/World/Building/Dressing/AE_Majors2/Washbasin": "own collider",
+  "/World/Building/Dressing/AE_Majors2/Soap": "own collider",
+  "/World/Building/Dressing/AE_Majors3/Monitor": "overhead (z>1.55)",
+  "/World/Building/Dressing/AE_Majors3/CarerChair0": "own collider",
+  "/World/Building/Dressing/AE_Majors3/CarerChair1": "own collider",
+  "/World/Building/Dressing/AE_Majors3/Washbasin": "own collider",
+  "/World/Building/Dressing/AE_Majors3/Soap": "own collider",
+  "/World/Building/Dressing/AE_Majors4/Monitor": "overhead (z>1.55)",
+  "/World/Building/Dressing/AE_Majors4/CarerChair0": "own collider",
+  "/World/Building/Dressing/AE_Majors4/CarerChair1": "own collider",
+  "/World/Building/Dressing/AE_Majors4/Washbasin": "own collider",
+  "/World/Building/Dressing/AE_Majors4/Soap": "own collider",
+  "/World/Building/Dressing/AE_Majors5/Trolley": "own collider",
+  "/World/Building/Dressing/AE_Majors5/Monitor": "overhead (z>1.55)",
+  "/World/Building/Dressing/AE_Majors5/CarerChair0": "own collider",
+  "/World/Building/Dressing/AE_Majors5/CarerChair1": "own collider",
+  "/World/Building/Dressing/AE_Majors5/Washbasin": "own collider",
+  "/World/Building/Dressing/AE_Majors5/Soap": "own collider",
+  "/World/Building/Dressing/AE_Majors6/Trolley": "own collider",
+  "/World/Building/Dressing/AE_Majors6/Monitor": "overhead (z>1.55)",
+  "/World/Building/Dressing/AE_Majors6/CarerChair0": "own collider",
+  "/World/Building/Dressing/AE_Majors6/CarerChair1": "own collider",
+  "/World/Building/Dressing/AE_Majors6/Washbasin": "own collider",
+  "/World/Building/Dressing/AE_Majors6/Soap": "own collider",
+  "/World/Building/Dressing/AE_Majors7/Trolley": "own collider",
+  "/World/Building/Dressing/AE_Majors7/Monitor": "overhead (z>1.55)",
+  "/World/Building/Dressing/AE_Majors7/CarerChair0": "own collider",
+  "/World/Building/Dressing/AE_Majors7/CarerChair1": "own collider",
+  "/World/Building/Dressing/AE_Majors7/Washbasin": "own collider",
+  "/World/Building/Dressing/AE_Majors7/Soap": "own collider",
+  "/World/Building/Dressing/AE_Isolation/Bed": "own collider",
+  "/World/Building/Dressing/AE_Isolation/Monitor": "overhead (z>1.55)",
+  "/World/Building/Dressing/AE_Isolation/Washbasin": "own collider",
+  "/World/Building/Dressing/AE_Isolation/Gloves": "small",
+  "/World/Building/Dressing/AE_Isolation/Bin": "own collider",
+  "/World/Building/Dressing/AE_Relatives/Sofa": "own collider",
+  "/World/Building/Dressing/AE_Relatives/SideTable": "own collider",
+  "/World/Building/Dressing/AE_Relatives/Chair0": "own collider",
+  "/World/Building/Dressing/AE_Relatives/Chair1": "own collider",
+  "/World/Building/Dressing/AE_Relatives/Water": "own collider",
+  "/World/Building/Dressing/AE_DirtyUtility/Sluice": "own collider",
+  "/World/Building/Dressing/AE_DirtyUtility/Shelves": "own collider",
+  "/World/Building/Dressing/AE_DirtyUtility/Bin0": "own collider",
+  "/World/Building/Dressing/AE_DirtyUtility/Bin1": "own collider",
+  "/World/Building/Dressing/AE_CleanUtility/MedCabinet": "own collider",
+  "/World/Building/Dressing/AE_CleanUtility/LinenTrolley": "own collider",
+  "/World/Building/Dressing/AE_StaffBase/Desk0": "own collider",
+  "/World/Building/Dressing/AE_StaffBase/Computer0": "own collider",
+  "/World/Building/Dressing/AE_StaffBase/Desk1": "own collider",
+  "/World/Building/Dressing/AE_StaffBase/Computer1": "own collider",
+  "/World/Building/Dressing/AE_StaffBase/Chair0": "own collider",
+  "/World/Building/Dressing/AE_StaffBase/Chair1": "own collider",
+  "/World/Building/Dressing/AE_Resus/Trolley0": "own collider",
+  "/World/Building/Dressing/AE_Resus/Monitor0": "overhead (z>1.55)",
+  "/World/Building/Dressing/AE_Resus/Oxygen0": "own collider",
+  "/World/Building/Dressing/AE_Resus/GasPanel0": "own collider",
+  "/World/Building/Dressing/AE_Resus/Suction0": "own collider",
+  "/World/Building/Dressing/AE_Resus/ProcTrolley0": "own collider",
+  "/World/Building/Dressing/AE_Resus/Trolley1": "own collider",
+  "/World/Building/Dressing/AE_Resus/Monitor1": "overhead (z>1.55)",
+  "/World/Building/Dressing/AE_Resus/Oxygen1": "own collider",
+  "/World/Building/Dressing/AE_Resus/GasPanel1": "own collider",
+  "/World/Building/Dressing/AE_Resus/Suction1": "own collider",
+  "/World/Building/Dressing/AE_Resus/ProcTrolley1": "own collider",
+  "/World/Building/Dressing/AE_Resus/Cabinet": "own collider",
+  "/World/Building/Dressing/AE_Resus/Washbasin": "own collider",
+  "/World/Building/Dressing/AE_Resus/Soap": "own collider",
+  "/World/Building/Dressing/AE_Handover/Gurney0": "own collider",
+  "/World/Building/Dressing/AE_Handover/Gurney1": "own collider",
+  "/World/Building/Dressing/AE_Handover/Desk": "own collider",
+  "/World/Building/Dressing/AE_Handover/Computer": "own collider",
+  "/World/Building/Dressing/AE_Handover/Chair": "own collider",
+  "/World/Building/Dressing/AE_XRay/Table": "own collider",
+  "/World/Building/Dressing/AE_XRay/Control": "own collider",
+  "/World/Building/Dressing/AE_XRay/ControlPC": "own collider",
+  "/World/Building/Dressing/AE_XRay/ControlChair": "own collider",
+  "/World/Building/Dressing/AE_XRay/Lightbox": "own collider",
+  "/World/Building/Dressing/AE_Waiting/Bench0": "own collider",
+  "/World/Building/Dressing/AE_Waiting/Bench1": "own collider",
+  "/World/Building/Dressing/AE_Waiting/Bench2": "own collider",
+  "/World/Building/Dressing/AE_Waiting/Reception": "own collider",
+  "/World/Building/Dressing/AE_Waiting/ReceptionPC": "own collider",
+  "/World/Building/Dressing/AE_Triage/Desk": "own collider",
+  "/World/Building/Dressing/AE_Triage/Computer": "own collider",
+  "/World/Building/Dressing/AE_Triage/Chair": "own collider",
+  "/World/Building/Dressing/AE_Triage/PatientChair": "own collider",
+  "/World/Building/Dressing/AE_Triage/Scale": "own collider",
+  "/World/Building/Dressing/AE_Triage/Washbasin": "own collider",
+  "/World/Building/Dressing/AE_Minors1/Couch": "own collider",
+  "/World/Building/Dressing/AE_Minors1/Chair": "own collider",
+  "/World/Building/Dressing/AE_Minors1/Washbasin": "own collider",
+  "/World/Building/Dressing/AE_Minors1/Soap": "own collider",
+  "/World/Building/Dressing/AE_Minors2/Couch": "own collider",
+  "/World/Building/Dressing/AE_Minors2/Chair": "own collider",
+  "/World/Building/Dressing/AE_Minors2/Washbasin": "own collider",
+  "/World/Building/Dressing/AE_Minors2/Soap": "own collider",
+  "/World/Building/Dressing/Ward_B1/Bed": "own collider",
+  "/World/Building/Dressing/Ward_B1/BedsideTable": "own collider",
+  "/World/Building/Dressing/Ward_B1/Chair": "own collider",
+  "/World/Building/Dressing/Ward_B1/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_B1/Soap": "own collider",
+  "/World/Building/Dressing/Ward_B1/Towels": "own collider",
+  "/World/Building/Dressing/Ward_B1/Oxygen": "own collider",
+  "/World/Building/Dressing/Ward_B2/Bed": "own collider",
+  "/World/Building/Dressing/Ward_B2/BedsideTable": "own collider",
+  "/World/Building/Dressing/Ward_B2/Chair": "own collider",
+  "/World/Building/Dressing/Ward_B2/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_B2/Soap": "own collider",
+  "/World/Building/Dressing/Ward_B2/Towels": "own collider",
+  "/World/Building/Dressing/Ward_B2/Oxygen": "own collider",
+  "/World/Building/Dressing/Ward_B3/Bed": "own collider",
+  "/World/Building/Dressing/Ward_B3/BedsideTable": "own collider",
+  "/World/Building/Dressing/Ward_B3/Chair": "own collider",
+  "/World/Building/Dressing/Ward_B3/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_B3/Soap": "own collider",
+  "/World/Building/Dressing/Ward_B3/Towels": "own collider",
+  "/World/Building/Dressing/Ward_B3/Oxygen": "own collider",
+  "/World/Building/Dressing/Ward_B4/Bed": "own collider",
+  "/World/Building/Dressing/Ward_B4/BedsideTable": "own collider",
+  "/World/Building/Dressing/Ward_B4/Chair": "own collider",
+  "/World/Building/Dressing/Ward_B4/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_B4/Soap": "own collider",
+  "/World/Building/Dressing/Ward_B4/Towels": "own collider",
+  "/World/Building/Dressing/Ward_B4/Oxygen": "own collider",
+  "/World/Building/Dressing/Ward_B5/Bed": "own collider",
+  "/World/Building/Dressing/Ward_B5/BedsideTable": "own collider",
+  "/World/Building/Dressing/Ward_B5/Chair": "own collider",
+  "/World/Building/Dressing/Ward_B5/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_B5/Soap": "own collider",
+  "/World/Building/Dressing/Ward_B5/Towels": "own collider",
+  "/World/Building/Dressing/Ward_B5/Oxygen": "own collider",
+  "/World/Building/Dressing/Ward_B6/Bed": "own collider",
+  "/World/Building/Dressing/Ward_B6/BedsideTable": "own collider",
+  "/World/Building/Dressing/Ward_B6/Chair": "own collider",
+  "/World/Building/Dressing/Ward_B6/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_B6/Soap": "own collider",
+  "/World/Building/Dressing/Ward_B6/Towels": "own collider",
+  "/World/Building/Dressing/Ward_B6/Oxygen": "own collider",
+  "/World/Building/Dressing/Ward_ES_B1/Toilet": "own collider",
+  "/World/Building/Dressing/Ward_ES_B1/ToiletPaper": "own collider",
+  "/World/Building/Dressing/Ward_ES_B1/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_ES_B1/Mirror": "own collider",
+  "/World/Building/Dressing/Ward_ES_B2/Toilet": "own collider",
+  "/World/Building/Dressing/Ward_ES_B2/ToiletPaper": "own collider",
+  "/World/Building/Dressing/Ward_ES_B2/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_ES_B2/Mirror": "own collider",
+  "/World/Building/Dressing/Ward_ES_B3/Toilet": "own collider",
+  "/World/Building/Dressing/Ward_ES_B3/ToiletPaper": "own collider",
+  "/World/Building/Dressing/Ward_ES_B3/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_ES_B3/Mirror": "own collider",
+  "/World/Building/Dressing/Ward_ES_B4/Toilet": "own collider",
+  "/World/Building/Dressing/Ward_ES_B4/ToiletPaper": "own collider",
+  "/World/Building/Dressing/Ward_ES_B4/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_ES_B4/Mirror": "own collider",
+  "/World/Building/Dressing/Ward_ES_B5/Toilet": "own collider",
+  "/World/Building/Dressing/Ward_ES_B5/ToiletPaper": "own collider",
+  "/World/Building/Dressing/Ward_ES_B5/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_ES_B5/Mirror": "own collider",
+  "/World/Building/Dressing/Ward_ES_B6/Toilet": "own collider",
+  "/World/Building/Dressing/Ward_ES_B6/ToiletPaper": "own collider",
+  "/World/Building/Dressing/Ward_ES_B6/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_ES_B6/Mirror": "own collider",
+  "/World/Building/Dressing/Ward_WS1/Terminal": "own collider",
+  "/World/Building/Dressing/Ward_WS1/ResusTrolley": "own collider",
+  "/World/Building/Dressing/Ward_WS2/Terminal": "own collider",
+  "/World/Building/Dressing/Ward_WS2/Scale": "own collider",
+  "/World/Building/Dressing/Ward_AssistedShower/Toilet": "own collider",
+  "/World/Building/Dressing/Ward_AssistedShower/ToiletPaper": "own collider",
+  "/World/Building/Dressing/Ward_AssistedShower/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_AssistedShower/Mirror": "own collider",
+  "/World/Building/Dressing/Ward_DayRoom/Bench": "own collider",
+  "/World/Building/Dressing/Ward_DayRoom/SideTable": "own collider",
+  "/World/Building/Dressing/Ward_DayRoom/Chair0": "own collider",
+  "/World/Building/Dressing/Ward_DayRoom/Chair1": "own collider",
+  "/World/Building/Dressing/Ward_Cleaners/MopA": "own collider",
+  "/World/Building/Dressing/Ward_Cleaners/MopB": "own collider",
+  "/World/Building/Dressing/Ward_Cleaners/WetFloor": "own collider",
+  "/World/Building/Dressing/Ward_Cleaners/Sink": "own collider",
+  "/World/Building/Dressing/Ward_CleanUtility/MedCabinet": "own collider",
+  "/World/Building/Dressing/Ward_CleanUtility/LinenTrolley": "own collider",
+  "/World/Building/Dressing/Ward_CleanUtility/Washbasin": "own collider",
+  "/World/Building/Dressing/Ward_Pantry/Water": "own collider",
+  "/World/Building/Dressing/Ward_Pantry/Worktop": "own collider",
+  "/World/Building/Dressing/Ward_Pantry/Bin": "own collider",
+  "/World/Building/Dressing/Ward_DirtyUtility/Sluice": "own collider",
+  "/World/Building/Dressing/Ward_DirtyUtility/Shelves": "own collider",
+  "/World/Building/Dressing/Ward_DirtyUtility/Bin0": "own collider",
+  "/World/Building/Dressing/Ward_DirtyUtility/Bin1": "own collider",
+  "/World/Building/Dressing/Ward_Disposal/Bin0": "own collider",
+  "/World/Building/Dressing/Ward_Disposal/Bin1": "own collider",
+  "/World/Building/Dressing/Ward_Entrance/Counter": "own collider",
+  "/World/Building/Dressing/Ward_Entrance/Computer": "own collider",
+  "/World/Building/Dressing/Ward_Entrance/Chair": "own collider",
   "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_corner_01": "overhead (z>3.20)",
   "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_corner_02": "overhead (z>3.20)",
   "/World/Wing/ORSuite/Props/sm_ceilinglamp_a01_corner_03": "overhead (z>3.20)",
@@ -1826,5 +2185,47 @@
   "/World/Wing/ORSuite/Props/sm_instrrumentsterilizationtray_c02_05": "small",
   "/World/Wing/ORSuite/Props/sm_insulinlancingdevice_b01_02": "small",
   "/World/Wing/ORSuite/Props/sm_surgicalmarkingpen_a01_02": "small"
- }
+ },
+ "exterior": [
+  "DriveFloor",
+  "FootwayRaised",
+  "FootwayRamp",
+  "KerbWest",
+  "KerbWestUpper",
+  "KerbNorthWest",
+  "KerbEast",
+  "KerbSouth",
+  "KerbRoadEast",
+  "KerbAELaneNorth",
+  "KerbAELaneSouth",
+  "KerbAEApronWest",
+  "KerbAEApronEast",
+  "CanopyPost0",
+  "CanopyPost1",
+  "SignTotemPost0",
+  "SignTotemPost1",
+  "AmbulanceBody",
+  "AmbulanceCab"
+ ],
+ "partitions": {
+  "compartment": 6,
+  "stair": 8,
+  "fixed": 3,
+  "lobby": 4,
+  "shaft": 2,
+  "partition": 17,
+  "wc": 8,
+  "rebuilt": 30,
+  "glass": 4,
+  "junction": 5
+ },
+ "hidden_prims": 248,
+ "hidden_active_in_scene": 0,
+ "hidden_colliders": 0,
+ "hidden_missing": [],
+ "glass_hidden": [
+  "GlassDoor_55/GlassDoor/GlassDoor/Section1",
+  "GlassDoor2_5/GlassDoor/GlassDoor/Section1"
+ ],
+ "fixtures_filtered_against": "/World/HG1_Colliders"
 }
