@@ -1,4 +1,6 @@
-# g1-isaac-sim: G1 in the Isaac hospital, speaking lowcmd/lowstate
+# WardZero Isaac Sim Backend for the Unitree G1
+
+Part of [WardZero](https://bkrakshith.github.io/wardzero/), a simulated hospital for testing robots before they meet patients. Start from the main repository, [hospital-sim](https://github.com/Bkrakshith/hospital-sim).
 
 This repository is the Isaac Sim 6.0 backend of the G1 stack. It puts the G1 29-DoF rev 1.0 with BrainCo Revo2
 hands in the Isaac hospital. The robot speaks the same low-level interface as the real robot and as the MuJoCo
