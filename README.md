@@ -2,27 +2,23 @@
 
 Part of [WardZero](https://bkrakshith.github.io/wardzero/), a simulated hospital for testing robots before they meet patients. Start from the main repository, [hospital-sim](https://github.com/Bkrakshith/hospital-sim).
 
-This repository is the Isaac Sim 6.0 backend of the G1 stack. It puts the G1 29-DoF rev 1.0 with BrainCo Revo2
-hands in the Isaac hospital. The robot speaks the same low-level interface as the real robot and as the MuJoCo
-backend in `g1-mujoco-sim`. This interface is `/lowcmd`, `/lowstate`, `/clock`, `/odom`, `/scan` and the hand
-topics. The ROS 2 stack in `hospital-sim-ros2` (controller, mode manager, keyboard, UI, Nav2) therefore runs on top
-with `backend:=isaac` and no other change.
+Runs the Unitree G1 29-DoF rev 1.0 with BrainCo Revo2 hands in the WardZero hospital, in Isaac Sim 6.0. The
+simulated robot speaks the real robot's low-level interface (`/lowcmd`, `/lowstate`, `/clock`, `/odom`, `/scan`
+and the hand topics), the same as the MuJoCo backend in `g1-mujoco-sim`. The ROS 2 stack in `hospital-sim-ros2`
+(controller, mode manager, keyboard teleop, Nav2) runs on top with `backend:=isaac` and no other change.
 
-The repository reads from three sibling repositories:
+It reads from three sibling repositories:
 
-- `g1-brainco-description` provides the URDF and `robot_spec.json`.
-- `hospital-sim-env` provides the scene, the room layout, the instruments and their placements.
-- `g1-mujoco-sim` provides the shared spawn poses in `worlds/spawns.json`.
+- `g1-brainco-description`: the URDF and `robot_spec.json`.
+- `hospital-sim-env`: the scene, the room layout and the object placements.
+- `g1-mujoco-sim`: the shared spawn poses in `worlds/spawns.json`.
 
-The master repository `hospital-sim` checks all of them out side by side, and `env.sh` is in its root.
+It never modifies `hospital-sim-env/isaac/` (`scene/`, `usd/`, `assets/`) or `hospital-sim-env/objects/`. It adds
+USD layers that sublayer or reference them.
 
-Paths in this file are relative to this folder unless they start with a sibling repository name
-(`hospital-sim-env/...`, `g1-brainco-description/...`, `g1-mujoco-sim/...`). The paths `docs/interfaces.md` and
-`env.sh` are in the master repository root. Run the commands from the master repository root
+Paths are relative to this folder unless they start with a sibling repository's name. `env.sh` and
+`docs/interfaces.md` are in the root of the `hospital-sim` checkout, and the commands run from there
 (`./g1-isaac-sim/run.sh ...`).
-
-This repository does not modify `hospital-sim-env/isaac/` (`scene/`, `usd/`, `assets/`) or
-`hospital-sim-env/objects/`. It adds USD layers that sublayer or reference them.
 
 ## How it works
 
